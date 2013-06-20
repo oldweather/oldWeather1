@@ -1,0 +1,33 @@
+Cape Atholl			See Kangaarsuk
+Cape York (cape)			See Innaanganeq
+Cape York (town)			See Perlernerit
+Comanche Bay			See Igtip Kangertiva
+Conical Rock			See Igannaq
+			
+Disko Bay			See Qeqertarsuup Tunua
+Disko Bugt			See Qeqertarsuup Tunua
+Disko Island			See Qeqertarsuaq island
+Disko Oer			See Qeqertarsuaq island
+Godhavn			See Qeqertarsuaq town
+			
+Igannaq	76.09/-68.67	Qaasuitsup/Nordgronland	
+Igtip Kangertiva	65.07/-40.3	Sermersooq/Ostgronland	
+Innaanganeq	75.91/-66.45	Qaasuitsup/Nordgronland	
+Ivanganek			See Perlernerit
+Kangaarsuk	76.38/-69.63	Qaasuitsup/Nordgronland	
+			
+Kap Atholl			See Kangaarsuk
+Kap York			See Innaanganeq
+Kekertarsuak			See Qeqertarsuaq town
+Kikertarsuak			See Qeqertarsuaq island
+Melville Monument	75.77/-59.42	Qaasuitsup/Nordgronland	
+			
+Perlernerit	75.93/-66.45	Qaasuitsup/Nordgronland	
+Pikiitsi	64.2/-40.65	Sermersooq/Ostgronland	
+Pikiutdleq	65/-40.75	Sermersooq/Ostgronland	
+Qeqertarsuaq island	69.75/-53.5	Qaasuitsup/Vestgronland	Island
+Qeqertarsuaq town	69.25/-53.55	Qaasuitsup/Vestgronland	Town
+			
+Qeqertarsuup Tunua	69/-52	Qaasuitsup/Vestgronland	
+Wolstenholme O	76.44/-70.01	Qaasuitsup/Nordgronland	
+Wolstenholme Island			See Wolstenholme O

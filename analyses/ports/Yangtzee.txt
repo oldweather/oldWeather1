@@ -1,0 +1,151 @@
+Location	Other spellings	Present day location	Latitude (N)	Longitude (E)
+Shanghai		Shanghai	31.20	121.50
+Kiang-Nan Dock	Jiangnan, Jiang-Nan, Chiang-Nan	Kiang-Nan	31.19	121.49
+Woosung	Woo-sung, Wu-sung, Wusong, Wusungchen	Baoshan	31.41	121.50
+Sloping Clump		Near Yuepuzhen?	31.48	121.44
+Dove's Nest		Off Chongming	31.64	121.32
+Act?on Shoals		Off Lvhuazhen	31.68	121.18
+Centaur Bank		Off Lvhuazhen?	31.72	121.18
+Knuckle		Off Sanhezhen?	31.77	121.11
+Plover Point		Longzhaoyuan	31.95	120.85
+Kuishan Point	Kushan Point	Junshan Scenic Area?	31.93	120.88
+Tienshien	Tungchow	Nantong?	31.97	120.80
+Vine Point		Opposite Nantong?	31.99	120.76
+Big Tree		Off Changqingshaxiang Island?	32.03	120.66
+Pitman King Island		Changqingshaxiang Island	32.02	120.63
+Cooper Bank	Cooper Island	Off Changqingshaxiang Island?	32.02	120.52
+Rose Island		Shuangshan Island?	32.01	120.40
+Kang Yin forts	Kiangyin, Espiegle Rocks	Jiangyin	31.95	120.28
+Bate Point		Ligangzhen?	31.95	120.10
+Taishing Station		Port of Taixing?	32.09	119.94
+Taishing		Taixing	32.15	119.91
+Sinnimu Creek		Yangzhong cut-off?	32.20	119.82
+Beaver Island		Off Yangzhong?	32.30	119.72
+Chang Sang Chou		Dagangzhen	32.20	119.65
+Tasha Island		Jiangxinzhen Island?	32.19	119.58
+Chinkiang	Chin-kiang, Chinkin, Hsiangshan	Zhenjiang	32.26	119.45
+Deer Island	Pi-Sin-Chau	Shiyezhen Island	32.19	119.31
+Bethune Point		West end of Shiyezhen island?	32.22	119.24
+Ta-Ho-Kau		Qingshanzhen?	32.40	119.09
+Morris Point	Morrison Point, Lone Tree Hill	Qizia Zhen?	32.18	118.96
+Mud Fort		Qizia?	32.17	118.86
+Nanking		Nanjing	32.10	118.73
+Pukow		Pukou	32.05	118.67
+Duck Island		Zimuzhou?	31.92	118.60
+Pheasant Island		Zaishengzhou	31.83	118.51
+May Queen Island		Xiaohuangzhou?	31.71	118.45
+Rosina Rock		Near Huashan?	31.71	118.45
+Heasanchan Bluff	Heasanchan Point, Heasanshan Bluff	Jiuhuashan?	31.68	118.44
+Tai Ping Fu		Dangtu?	31.58	118.46
+East and West Pillar	Rocky Point	Erjia?	31.50	118.37
+Wade Island		Fuzhuang?	31.48	118.35
+Haines Point		Wangxiang?	31.45	118.34
+Wu-hu		Wuhu	31.33	118.35
+Shansi Beacon		Off Xiaozhouxiang?	31.29	118.25
+Barker Island		Off Xingangzhen?	31.19	118.06
+Horse Shoe Bend		Off Hebazhen?	31.28	118.04
+Panski Pagoda		Digangzhen?	31.11	118.00
+Osborne Island		Off Liuduzhen?	31.11	117.87
+Two Fathom Creek		Near Tongling	31.09	117.82
+White Beacon	Walled City, Walled Village	Tuqiaozhen?	31.05	117.75
+Wu Pa Kau		Tongling?	30.95	117.78
+Buckminster Island	Jeffrey Island	Laozhouxiang?	30.98	117.74
+Perkins Point		South tip of Laozhouxiang?	30.91	117.74
+Saint Thomson Island		Off Datongzhen	30.81	117.74
+Tatung		Datongzhen	30.80	117.74
+Muken		Meilongzhen?	30.77	117.65
+Chichau		Chizhou	30.68	117.47
+Fitzroy Island		Off Chizhou	30.72	117.46
+Hen Point	Kiang Loong Wreck	Mashi	30.65	117.25
+Chuang King Kau		Xinzhouxiang Island?	30.53	117.22
+Nganking	Anking, Guankin?	Anqing	30.50	117.06
+Jocelyn Island		Jiangxinzhou Island	30.39	116.90
+Christmas Island		Off Hongjiafan?	30.29	116.92
+Wu Chi Yang		No reference found, but must be somewhere near Anqing		
+Tungliu	Tung-liu	Dongliuzhen	30.21	116.90
+False Island		Off Fengshoucun?	30.16	116.85
+Sankau		Sankou Yao	30.10	116.80
+Hwangang		Huayangzhen?	30.09	116.78
+Hwangshiki Bluff		Opposite Huayangzhen?	30.06	116.75
+Dove Point		Pengze?	29.90	116.54
+Snipe Island		Yezihao?	29.88	116.48
+Hukau		Hukou	29.75	116.22
+Point Otter	NE Crossing	Off Hukou	29.76	116.22
+Little Orphan		Jiangzhoucun?	29.86	116.38
+Lay Island		Jiangzhouzhen	29.77	116.15
+Kiukiang	Kiu-kiang	Jiujiang	29.74	116.00
+        Nankan	        Nan-Kang	        Xingzi	29.44	116.05
+        Wooching		        Wuchengzhen	29.18	116.01
+        Nanchang		        Nanchang	28.68	115.87
+Hunter Island		Off Longpingzhen?	29.83	115.72
+Wusueh		Wuxue	29.84	115.56
+Split Hill		Opposite Wuxue?	29.84	115.51
+Low Point		No reference found, near Fuchizhen?	29.86	115.46
+Havoc Rocks		Fuchizhen	29.86	115.46
+Hoves Creek		Qishui river (opposite Shazikou)	30.12	115.30
+Cock's Head	Ke-Tau	Xisai Mountain?	30.21	115.16
+Shi Hui Yao	Shi-hui-yao, Sz-hui-you, Lee Rocks	Xisaishan	30.21	115.11
+Wongshik-Kong	Wong-Shi-Kong, Hwang-shik-kang	Huangshigang	30.24	115.08
+Collison Island		Xinyuzhou	30.29	115.09
+Pook Island		Daijiazhou Island?	30.33	115.09
+Ten Foot Rock	Hwangchow	Huangzhou	30.43	114.87
+Squeeze Island		Junling Cun?	30.56	114.84
+Gravener Island		Off Tuanfeng?	30.59	114.82
+Willis Island		Off Tuanfeng?	30.59	114.82
+Porpoise Bluff		West of Huarong?	30.57	114.65
+Shako Village		No reference found, near Longkou?	30.62	114.57
+Huquang Channel		North of Bouncer Island	30.69	114.41
+Bouncer Island		Tian Xing Xiang	30.67	114.42
+Hankow		Wuhan	30.60	114.30
+Hwang-Chau		No reference found, Hanyang?	30.48	114.24
+Kin-Kow	King-Kau, Jinkou	Jiangxia	30.34	114.12
+Mei-Tau-Chui	Meitau Chui	No reference found, near Hannan?	30.31	114.10
+Pae-Cho	Paechu	Paizhou Wanzhen?	30.19	113.91
+Sang-Pai Chu		No reference found, off Paechu	30.18	114.00
+Hau-Chin-Kwang		Panjiawanzhen?	30.09	114.08
+Ashby Island		Baishazhou Island?	30.03	113.91
+Ku-Chi	Kuchi	Near Longkouchen?	29.94	113.83
+Lungkow		Longkouchen?	29.92	113.77
+Jau Kow	How Chow, Lau Chow Tau	Yaokou	29.89	113.62
+Pao Ta Chow		Chibizhen?	29.88	113.62
+Tuming Point		No reference found, near Huanggai Huzhen?	29.82	113.52
+Sing Ti Reach		Honghu	29.80	113.50
+Sian-Ho-Kwang		No reference found, near Ruxizhen?	29.65	113.33
+Jingsee		No reference found, Yangxi?	29.61	113.30
+Hsienfeng Rocks		No reference found, near Chenglin?		
+Chenglin	Ching Ling, Chen Lin, Chin Lin, Chin Lin Sein, Ching Dong Crossing	Yueyang	29.43	113.14
+        Youchou	        Yo-Chau, Yochau	        Yueyang	29.35	113.10
+        Low Ming Tan		        Baihuxiang?	28.73	112.84
+        Siang-Yin		        Xiangyin	28.67	112.88
+        Changsha	        Chang-sha	        Changsha	28.20	112.97
+Fanchi Point		West of Junshan?	29.47	112.96
+Low Point		No reference found, near Hongshantouchen?	29.64	112.93
+Shang-Chai-Wan		Shangchewanzhen	29.77	113.02
+Brine Bend		Opposite Changning	29.68	112.93
+Hong Kong Reach	Kinlee Transit	Near Jianli	29.80	112.90
+Kin Fin		No reference found, near Jianli?	29.80	112.90
+Sin Ho Kau	Sinho-Kow	Near Tashiyizhen	29.69	112.62
+Luikikow		No reference found, Tiaoguanzhen?	29.70	112.63
+Tiauhienkau		Xiaohekouzhen?	29.77	112.59
+Hou Kin Kow		No reference found, near Xiaohekou?	29.77	112.59
+Salamis Bar		No reference found, between Jianli and Shishou?		
+Temple Hill Bend		No reference found, off Beixiongjia Dou?	29.78	112.57
+Kwang Ying		No reference found, near Dongshengzhen?	29.76	112.54
+Skipper Point		Opposite Shishou	29.76	112.40
+Sunday Island		Opposite Wenjiatai	29.83	112.40
+Wanhai		No reference found, between Shishou and Jiangling?	29.93	112.42
+Hoia	Hohia, Hohi	Hujia, opposite Jiangling?	30.02	112.40
+Tu-Ki-Chau		No reference found, between Jiangling and Gong'an?	30.06	112.34
+Ma-Ta-Chi		Majiazhaixiang	30.07	112.73
+Shasi	Shaze, Shazhe	Shashi	30.30	112.24
+Taiping Chau		Taiping Koucun	30.29	112.15
+Shitaoutsze		Shitaozi	30.29	112.01
+Ta-Ho-Kau		No reference found, near Zhangjiahe?	30.31	111.96
+Kiangkow		No reference found, near Qixingtaizhen?	30.41	111.88
+Tungtse		No reference found, near Dongshizhen?	30.40	111.71
+Grant Point		No reference found, off Chendianzhen?	30.27	111.60
+Chi-Kiang		Zhichengzhen	30.29	111.53
+Pih-Yang		Baiyangzhen	30.41	111.51
+Itu Rocks		No reference found, near Gaobazhouzhen?	30.43	111.44
+Hung-Hwa-Kau		Honghuataozhen	30.52	111.42
+Ichang		Yichang	30.69	111.28

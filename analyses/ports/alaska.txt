@@ -1,0 +1,460 @@
+Point McCartey	55.10/-131.70	
+Point Saint Albans	56.08/-133.97	
+Point Smith		See Cape Smyth
+Point Winslow	55.11/-131.19	
+Porpoise Rocks	60.32/-146.68		
+			
+Port Clarence	65.24/-166.68		
+Port Clearance		See Port Clarence
+Port Etches	60.33/-146.60	
+Port Moller	55.99/-160.58	
+Port Moore	71.38/-156.45		
+			
+Potter Rock	55.30/-131.58	
+Priest Rock	53.90/-166.44	
+Priest Rock	53.77/-166.99	
+Princess Head	53.98/-166.41	
+Pumicestone Bay	53.53/-167.12	
+			
+Pyramid Point	59.93/-144.41	
+Race Rocks	54.13/-165.66	
+Raven Point	54.63/-164.85	
+Refuge Inlet		See Walakpa Bay
+Refuge Station		See Barrow
+			
+Resurrection Bay	60.01/-149.37		
+Return Islands	70.48/-148.88		
+Return Reef		See Return Islands
+Revillagagedo Channel		See Revillagigedo Channel
+Revillagigedo Channel	55.06/-131.12	
+			
+Round Point	56.28/-132.66		
+Rudisell Reef	52.95/-168.87	
+Rugged Island	59.86/-149.38		
+Saint Diomede Islands		See Diomede Islands
+Saint George Island	56.59/-169.63	Saint George Island Map
+			
+Saint Matthew Island	60.41/-172.72	
+Saint Paul Harbor	57.77/-152.44	
+Saint Paul Island	57.12/-170.27	Saint Paul Loran Station p
+Savoonga Point	63.70/-170.49		
+Scotch Cap	54.40/-164.79	Scotch Cap Light
+			
+Sea Lion Rock	57.10/-170.29	
+Seahorse Islands	70.89/-158.71		
+Seal Cape	55.36/-161.31		
+Seal Cape	54.39/-164.65		
+Seal Rocks	60.16/-146.83	
+			
+Seal Rocks	59.52/-149.63		
+Sealion Rocks	58.34/-151.81	
+Semidi Islands	56.06/-156.70		
+Seward	60.12/-149.43		
+Shelikof Strait	57.40/-154.87	
+			
+Sheshalik	66.99/-162.83		
+Ship Rock		See Ship Island
+Ship Island	55.60/-132.20	
+Sitkinak Strait	56.66/-154.04		
+Stikine Strait	56.31/-132.61		
+			
+Smith Bay	70.93/-154.40		
+Snow Passage	56.28/-132.95	
+South Passage Point	57.76/-134.94		
+Southwest Point	57.16/-170.41	
+Spasski Island	58.13/-135.27	
+			
+Spire Island	55.26/-131.50	
+Spit Rock		See Split Rock
+Split Rock	60.37/-172.77		
+Squaw Harbor	55.24/-160.55	
+Steamer Point	56.22/-132.71		
+			
+Sugarloaf Mountain	60.33/-172.61		
+Sumner Strait	56.39/-133.51	
+Swallow Head	52.11/-176.15	
+Sweeper Cove	51.85/-176.64	
+Tachinisok Inlet	70.82/-158.32		
+			
+Tanaga Island	51.79/-177.93	
+Tangent Point	71.15/-155.09		
+Temnac Bay	52.81/173.04	
+The Eye Opener		See Eye Opener
+The Inlet		See Wainwright Inlet
+			
+The Rock		See Fairway Rock
+Theodore Point	52.76/172.91	Attu Loran Station
+Thin Point	54.96/-162.57	
+Tigalda Island	54.10/-165.06	
+Tolstoi Point	57.14/-170.29	
+			
+Tolstoi Point	56.59/-169.47	
+Tongass Narrows	55.39/-131.75	
+Tonki Cape	58.35/-151.99		
+Tree Point	54.80/-130.93	Tree Point Lighthouse
+Trunk Point	51.77/-177.79	
+			
+Twin Islands	55.14/-131.22	
+Ukivok Island		See King Island
+Ukivuk King Island		See King Island
+Ugak Island	57.38/-152.28		
+Ugamak Island	54.21/-164.82	
+			
+Ukolnoi Island	55.22/-161.62		
+Ulakhta Head		See Ulakta Head
+Ulakta Head	53.92/-166.51	
+Uliaga Island	53.07/-169.77		
+Ulyaga Island		See Uliaga Island
+			
+Umga Island	54.80/-162.72		
+Umnak Island	53.22/-168.43	
+Unalaska Bay	53.93/-166.52	
+Unalaska Island	53.67/-166.65	
+Unga Island	55.26/-160.70	
+			
+Unga Spit	55.40/-160.72		
+Unimak Island	54.77/-164.19	
+Utekavik		See Barrow
+Utkiavie		See Barrow
+Vank Island	56.47/-132.61		
+			
+Vicknefski Rock	56.44/-133.01		
+Village Cove	57.13/-170.28	
+Volcano Bay	53.81/-167.12	
+Wainwright Inlet	70.60/-159.99		
+Walakpa Bay	71.14/-157.04		
+			
+Wedge Point	53.43/-167.38	
+Westdahl Rock	54.62/-162.84	
+Whale Point	57.12/-170.26	
+Whaling Station	54.13/-165.81	In Akutan Harbor
+Wide Bay	53.95/-166.62	
+			
+Womens Bay	57.71/-152.52	
+Wooded Island	59.87/-147.40	
+Woody Inlet		See Tachinisok Inlet
+Wrangell Island	56.30/-132.18		
+Zapadni Point	57.15/-170.34	
+			
+Zeto Point	51.91/-176.56	
+English Bay	57.14/-170.32	
+English Bay	60.29/-146.67	
+Eye Opener	56.39/-133.28	
+Fairway Rock	65.63/-168.84		
+Faraway Rock		See Fairway Rock
+			
+Farway Rock		See Fairway Rock
+Finger Shoal	51.87/-176.57	
+Flyaway Rock		See Fairway Rock
+Foggy Cape	56.54/-156.97	
+Forester Island		See Forrester Island
+			
+Forrester Island	54.80/-133.53	
+Fort Glenn		See Cape Field at Fort Glenn
+Fox Island	54.95/-162.42		
+Gannet Rocks	51.88/-176.62	
+Garden Cove	60.34/-146.53	
+			
+Garden Cove	56.57/-169.51		
+Goar's Island		See Saint Matthew Island
+Goer's Island		See Saint Matthew Island
+Goltsov Point	52.96/173.17	
+Gore's Island		See Saint Matthew Island
+			
+Gower's Island		See Saint Matthew Island
+Gravina Point	60.62/-146.25		
+Great Sitkin Island	52.06/-176.12	
+Guard Islands	55.45/-131.88	Guard Island Lighthouse
+Gulf of Alaska	57.00/-144.00		
+			
+Gull Rock	60.20/-172.79		
+Gull Rocks		See Gull Rock
+Hall Island	60.66/-173.10		
+Hanks Island	60.61/-145.98		
+Harrison Bay	70.66/-152.11		
+			
+Head Rock	51.93/-176.53	
+Helm Rock	56.37/-133.64		
+Hid Reef	55.06/-131.66	
+High Hill	52.97/-168.86	
+Hinchinbrook Island	60.38/-146.46	
+			
+Hog Rocks	55.18/-131.30	
+Holtz Bay	52.95/173.19	
+Hot Springs Bay	51.79/-177.79	
+Humpback Rock	57.71/-152.25	
+Icy Cape	70.33/-161.87		
+			
+Icy Strait	58.28/-135.65	
+Iliaski Island		See Inner Iliasik Island
+Iliuliuk Bay	53.89/-166.51	
+Illiuliuk Harbor		See Iliuliuk Bay
+Inian Islands	58.25/-136.33	
+			
+Inner Iliasik Island	55.06/-161.94	
+Jabbertown		See Point Hope (city)
+Johnston Point		See Johnstone Point
+Johnstone Point	60.48/-146.61		
+Kashega Bay	53.48/-167.17	
+			
+Kashega Point	53.52/-167.16	
+Kayak Island	59.93/-144.37	
+Kelley's Station		See Barrow
+Kelly's House		See Barrow
+Kelly's Station		See Barrow
+			
+Kelp Point	52.96/-168.87	
+Ketavie Point		See Whale Point
+Ketchikan	55.35/-131.66	
+Key Reef	56.16/-132.83		
+King Cove	55.06/-162.31	
+			
+King Island	64.98/-168.06		
+King's Island		See King Island
+Kitovi Point		See Whale Point
+Kodiak	57.79/-152.39	
+Kodiak Island	57.40/-153.48	
+			
+Konig's Station		See Point Hope (city)
+Koriga Point	53.96/-167.01	
+Kotzebue Sound	66.55/-162.75		
+Krasni Point	52.79/173.12	
+Krusenstern Island		See Little Diomede Island
+			
+Kuluk Bay	51.87/-176.56	
+Kuluk Shoal	51.91/-176.53	
+Kupreanof Point	55.57/-159.60	
+Kurityien Anaiuliak Island		See Ananiuliak Island
+Lemesurier Island	58.28/-136.08	
+			
+Lincoln Rock	56.06/-132.70	Lincoln Rock Light
+Little Diomede Island	65.72/-168.92		
+Little Sitkin Island	51.95/178.50		
+Lord Rock	54.73/-130.82	Lord Rock Light
+Lost Harbor	54.23/-165.61	
+			
+Makushin Bay	53.74/-166.96	
+Manning Point	53.44/-167.32	
+Manning Point	70.12/-143.51		
+Mary Island	57.71/-152.54	
+Mary Island	55.08/-131.21	Mary Island Lighthouse
+			
+Massacre Bay	52.83/173.22	
+Matwi Island		See Saint Matthew Island
+McArthur Reef	56.40/-133.18		
+Middle Ground Shoal	60.53/-146.34		
+Middleton Island	59.44/-146.33		
+			
+Mitrofania Island	55.88/-158.82		
+Morgan Point	55.04/-162.34		
+Moss Cape	55.12/-161.94	
+Mountain Point	55.29/-131.53	
+Narrow Point	55.79/-132.48	
+			
+Nevidiskof Bay		See Nevidiskov Bay
+Nevidiskov Bay	52.77/172.85	
+Niblack Point	55.55/-132.12	
+Nikolski Bay	52.95/-168.92	
+Noatak River	66.98/-162.51		
+			
+North Anchorage	56.61/-169.55		
+North Cape	52.42/-174.15	
+North Cape		See Savoonga Point
+North Head	54.23/-165.93	
+North Inian Pass	58.29/-136.36	
+			
+Nuchek	60.33/-146.66	
+Nyman Spit	57.72/-152.52	
+Observatory Point	53.40/-167.53	
+Okee Point	53.01/-168.85	
+Oliktok Point	70.51/-149.86		
+			
+Ooglamie		See Barrow
+Orca Bay	60.58/-146.21		
+Orca Inlet	60.52/-145.88		
+Otter Bight	53.44/-167.84		
+Otter Island	57.05/-170.40	
+			
+Otter Point	53.38/-167.85		
+Pacific Shoal	70.78/-151.94		
+Passage Islands		See Diomede Islands
+Pavlof Islands	55.13/-161.70		
+Peard Bay	70.85/-158.81		
+			
+Pearl Bay		See Peard Bay
+Phipps Point	60.35/-146.61	
+Pilot Rock	59.74/-149.47		
+Pinnacle Island	60.20/-172.76		
+Pinnacle Rock	59.79/-144.60	Near Cape Saint Elias
+			
+Pinnacle Rock	54.40/-164.80	
+Pinnacle Rock		See Pinnacle Island
+Pitt Point	70.92/-153.13		
+Point Adolphus	58.29/-135.78	
+Point Augusta	58.04/-134.95	
+			
+Point Baker	56.35/-133.62	
+Point Barrow	71.39/-156.48		
+Point Belcher	70.79/-159.65		
+Point Belgium		See Point Belcher
+Point Cooper		See Cooper Island
+			
+Point Crowley	56.12/-134.26	
+Point Franklin	70.91/-158.81		
+Point Gardner	57.02/-134.61	
+Point Hope	68.34/-166.83		
+Point Hope (city)	68.35/-166.73		
+Adak Island	51.78/-176.64	Adak Island Map
+
+Adugak Island	52.90/-169.17		
+Adugak Rock		See Adugak Island
+Akun Head	54.29/-165.63		
+Akun Island	54.19/-165.53	
+			
+Akutan	54.13/-165.79	
+Akutan Bay	54.19/-165.72	
+Akutan Island	54.13/-165.92	
+Akutan Point	54.15/-165.73	
+Alaid Island	52.76/173.90	
+			
+Albatross Bank	56.50/-152.50		
+Alimuda Bay	53.44/-167.35	
+Amak Island	55.42/-163.14	
+Amaknak Island	53.91/-166.54	
+Amchitka Island	51.57/178.88	Amchitka Loran Station
+			
+Amelius Island	56.18/-133.88		
+Anaiuliak		See Ananiuliak Island
+Anangouliak		See Ananiuliak Island
+Anangula Island		See Ananiuliak Island
+Ananiuliak Island	53.00/-168.90	
+			
+Anayulyak		See Ananiuliak Island
+Andrionica Island		See Andronica Island
+Andronica Island	55.32/-160.06		
+Angle Point	55.24/-131.42	
+Apavawook Cape	63.14/-168.87		
+			
+Arch Point	55.21/-161.90	
+Arch Rock	53.88/-166.56	
+Atka Island	52.14/-174.45	
+Attu Island	52.90/172.91	
+Bank Island		See Vank Island
+			
+Baralof Bay	55.24/-160.55	
+Barnes Point	51.82/-177.66	
+Barwell Island	59.86/-149.28		
+Barrow	71.29/-156.79		
+Barter Island	70.12/-143.67		
+			
+Bear Island		See Hall Island
+Beauclerc Island	56.26/-133.85		
+Belkofski Point	55.08/-162.05		
+Black Rock	55.02/-131.06	
+Blank Islands	55.27/-131.64	
+			
+Blossom Shoals	70.37/-161.94		
+Boat Rock	54.78/-130.80	
+Bold Cape	55.02/-162.24	
+Brower's Station		See Barrow
+Buldir Island	52.36/175.92		
+			
+Caamano Point	55.50/-131.97	
+Caines Head	59.98/-149.38		
+Cape Adagdak	52.00/-176.59	
+Cape Alitak	56.85/-154.30		
+Cape Anderson		See Apavawook Cape
+			
+Cape Chacon	54.69/-132.01	
+Cape Chagak	53.52/-168.23	
+Cape Cheerful	54.01/-166.68		
+Cape Chiniak	57.62/-152.16		
+Cape Decision	56.01/-134.13	Cape Decision Lighthouse
+			
+Cape Elizabeth		See Cape Lisburne
+Cape Field		See Cape Field at Fort Glenn
+Cape Field at Fort Glenn	53.38/-167.90	Wiki
+Cape Golovnin		See Point Hope
+Cape Halkett	70.80/-152.19		
+			
+Cape Hallet		See Cape Halkett
+Cape Hinchinbrook	60.23/-146.64	Cape Hinchinbrook Lighthouse
+Cape Kalekhta   		See Cape Kalekta
+Cape Kalekta	54.00/-166.37	
+Cape Kovrizhka	53.85/-167.16	
+			
+Cape Lisbon		See Cape Lisburne
+Cape Lisburne	68.88/-166.21		
+Cape Lizbond		See Cape Lisburne
+Cape Muzon	54.67/-132.69	
+Cape Nome	64.44/-165.01		
+			
+Cape Pankof	54.66/-163.07		
+Cape Pitt		See Pitt Point
+Cape Saint Elias	59.81/-144.59	Cape Saint Elias Lighthouse
+Cape Sarichef	54.58/-164.91	Cape Sarichef Loran Station
+Cape Seppings	67.95/-165.14		
+			
+Cape Seppins		See Cape Seppings
+Cape Smith		See Cape Smyth
+Cape Smyth	71.29/-156.79		
+Cape Smythe		See Cape Smyth
+Cape Spencer	58.20/-136.64	Cape Spencer Lighthouse
+			
+Cape Starr	52.93/-168.96	Umnak Loran Station
+Cape Sudak	51.86/-177.62	
+Cape Tanak	53.55/-167.98		
+Cape Tangent		See Tangent Point
+Cape Tolstoi	55.36/-161.50		
+			
+Cape Uyak	57.64/-154.34	
+Cape Wedge	55.29/-159.88	
+Cascade Point	56.53/-169.58		
+Cathedral Rocks	53.74/-166.88	
+Channel Islands	60.62/-145.79		
+			
+Chatham Strait	56.96/-134.63	
+Chernofski	53.41/-167.55	
+Chernofski Point	53.41/-167.55	
+Chirikof Island	55.83/-155.62	
+Chukinuksak Point		See Chuniksak Point
+			
+Chuniksak Point	52.79/172.74	
+Chunisak Point		See Chuniksak Point
+Clarence Strait	55.99/-132.62	
+			
+Coal Mine		See Corwin Bluff
+Coal Vein		See Corwin Bluff
+Cone Hill	57.18/-170.36		
+Constantine Harbor	51.40/179.30	
+Cooper Islands	52.95/173.25	
+			
+Cooper Island	71.24/-155.68		
+Cooper's Station		See Point Hope (city)
+Cordova	60.54/-145.76		
+Corwin Bluff	68.88/-165.05		
+Corwin Coal Mine		See Corwin Bluff
+			
+Cross Sound	58.18/-136.51	
+Cutter Point	53.39/-167.52	
+Cutter Rocks	55.29/-131.52	
+Dalnoi Point	56.61/-169.77	
+Dean's Inlet		See Dease Inlet
+			
+Dease Inlet	71.03/-155.43		
+Deer Island	54.92/-162.32		
+Deer Passage	55.00/-162.31	
+Derby Point	53.16/-168.78		
+Diomede Islands	65.78/-168.98		
+			
+Dixon Entrance	54.42/-132.00	
+Dolnoi Point		See Dalnoi Point
+Drew Point	70.88/-153.94		
+Dutch Harbor	53.89/-166.53	Dutch Harbor Map
+East Cape		See Apavawook Cape
+			
+East Channel		See East Channel Massacre Bay
+East Channel Massacre Bay	52.81/173.28		
+East Head, Harrison's Bay		See Oliktok Point
+East Head, Smith's Bay		See Drew Point
+Eider Point	53.96/-166.60	

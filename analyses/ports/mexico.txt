@@ -1,0 +1,7 @@
+Cape San Lucas	22.88/-109.91	Baja California	Mexico	Cabo San Lucas
+Cabo Falso	22.87/-109.96	Baja California	Mexico	
+Point Tosca	24.30/-111.71	Baja California	Mexico	Punta Tosca or Punta Tosco
+Cape San Lazaro	24.80/-112.30	Baja California	Mexico	Cabo San Lazaro
+Natividad Island	27.87/-115.18	Baja California	Mexico	Isla Natividad
+Cedros Mountain	28.13/-115.22	Baja California	Mexico	Cerro de Cedros
+Cedros Island	28.18/-115.22	Baja California	Mexico	Isla Cedros

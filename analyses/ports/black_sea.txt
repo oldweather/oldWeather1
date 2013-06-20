@@ -1,0 +1,51 @@
+Chanak (Canakkale) Turkey - Dardanelles          lat/long 40.1528, 26.4049
+Gallipolli, Turkey - Dardanelles          lat/long 40.4176, 26.6822
+
+Arablar (Avsaadasi), Turkey - Sea of Marmara          lat/long 40.494, 27.533
+Batche (Fenerbahce) Light, Turkey - Sea of Marmara          lat/long 40.96906, 29.03367
+Buyukdere, Turkey - Sea of Marmara          lat/long 41.1561, 29.0374
+Constantinople (Istanbul), Turkey - Sea of Marmara          lat/long 40.9731, 29.0356
+Fener Adasi Light, Turkey - Sea of Marmara          lat/long 40.4680, 28.1024
+Ismid, Turkey - Sea of Marmara          lat/long 40.739, 29.724
+Khairsiz Ada Light, Turkey - Sea of Marmara          lat/long 40.64350, 27.48481
+Marmara Island, Turkey - Sea of Marmara          lat/long 40.63, 27.62
+Pasha Liman (Pasalimani) Turkey - Sea of Marmara          lat/long 40.4804, 27.6063
+Polatia Bursa (Palatiya) Turkey - Sea of Marmara          lat/long 40.3023, 27.5298
+Panderma (Bandirma) Turkey - Sea of Marmara          lat/long 40.3549, 27.9552
+Prinkipos (Buyukada) Turkey - Sea of Marmara          lat/long 40.8521, 29.1393
+the Bosphorus, Turkey - Sea of Marmara to Black Sea
+
+Black Sea: Turkey
+Cape Amastra (Amasra) Turkey - Black Sea          lat/long 41.7534, 32.3879
+Cape Ieros (Yoros Burnu), Turkey - Black Sea          lat/long 41.0115, 39.721
+Cape Unieh (Unye), Turkey - Black Sea          lat/long 41.1445, 37.2921
+Cape Yasun (Caytepe - Yasun Burnu), Turkey - Black Sea          lat/long 41.1343, 37.6822
+Ince Burnu (Sinop), Turkey - Black Sea          lat/long 42.09694, 34.94475
+Kerempeh Light, Turkey - Black Sea          lat/long 42.01688, 33.33766
+Vona Pt, Turkey - Black Sea          lat/long 41.1158, 37.7863
+
+Black Sea: Adjaria
+Batoum or Batum (Batumi) Adjaria, - Black Sea          lat/long 41.650, 41.653
+Kintrist (Kinkisha) Adjaria - Black Sea          lat/long 41.8155, 41.7760
+Tskhirish (Tsikhisdziri) Adjaria - Black Sea          lat/long 41.7620, 41.7472
+
+Black Sea: Georgia
+Anaklia - Georgia-Abkhazia Border
+Pichvnari - Adjaria-Georgia Border
+Poti, Georgia - Black Sea          lat/long 42.1555, 41.6623
+
+Black Sea: Abkhazia
+Gagri (Gagra), Abkhazia - Black Sea          lat/long  43.3069, 40.252
+Pitsvints (Bichvint'a), Abkhazia - Black Sea          lat/long 43.14687, 40.3433
+
+Black Sea: Russia
+Adler's Point, Russia - Black Sea          lat/long 43.4178, 39.922
+
+Black Sea: Ukraine
+Anapa, Ukraine - Black Sea          lat/long 44.8942, 37.2977
+Novorossisk (Novorosiis'ke), Ukraine - Black Sea          lat/long 44.7291, 37.7876
+Odessa, Ukraine - Black Sea          lat/long 45.255, 30.203
+Serpent Id (Insula Serpilor or Zmeiny Light) Ukraine          lat/long 45.255, 30.203
+Sevastopol, Ukraine - Black Sea          lat/long 44.4950, 33.5941
+Theodosia (Feodosiya), Ukraine - Black Sea          lat/long 45.0279, 35.391
+Yalta, Ukraine - Black Sea          lat/long 44.4944, 34.1699

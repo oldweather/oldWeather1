@@ -1,0 +1,98 @@
+Aden	Lat 12.8, Long 45.1
+Amana I	Lat -8.7, Long 39.5
+Bagamoyo port	Lat -6.4, Long 38.9
+Barakuni Island	Lat -7.7, Long 39.8
+Beira	Lat -19.8, Long 34.8
+Boydu Island	Lat -7.9, Long 39.5
+Cape Delgado (Cabo Delgado)	Lat -10.7, Long 40.6
+Cape Town	Lat -33.9, Long 18.4
+Chaki Chaki Bay	Lat -5.3, Long 39.7
+Chumbe Island LH	Lat -6.3, Long 39.2
+Dar-es-salaam	Lat -6.8, Long 39.3
+Delagoa Bay (Maputo Bay) 	Lat -26.0, Long 32.7
+Durban (Port Natal)	Lat -29.9, Long 31.0
+Fanjove I  	Lat -8.6, Long 39.6
+Fungu Nyama	Lat -5.0, Long 39.2
+Fungu Tongone	Lat -5.3, Long 39.1
+Fungu Yasin	Lat -6.6, Long 39.2
+Gala Island	Lat -10.0, Long 39.7
+Gaze Bay	Lat -4.5, Long 39.5
+Jewe Reef	Lat -8.7, Long 39.5
+Kibondo island	Lat -8.1, Long 39.7
+Kilindini, Mombasa	Lat -4.1, Long 39.7
+Kisimayu (Kismayo) 	Lat 0.4, Long 42.5
+Kilwa Kisiwani	Lat -9.0, Long 39.5
+Kilwa Kivinje (Kivinge)	Lat -8.8, Long 39.4
+Kisiti	Lat -4.7, Long 39.4
+Kiswere	Lat -9.4, Long 39.6
+Koma I	Lat -7.5, Long 39.4
+Konduchi	Lat -6.7, Long 39.2
+Kwale Bay	Lat -5.0, Long 39.3
+Kwale I	Lat -7.4, Long 39.4
+Lindi	Lat -10.0, Long 39.7
+Machangi Reef	Lat -8.4, Long 39.5
+Makatumbe Is	Lat -6.8, Long 39.3
+Mange Reef	Lat -8.1, Long 39.6
+Maputo Bay (Delagoa Bay)	Lat -26.0, Long 32.7
+Mazimbwa (Mocimboa da Praia) 	Lat -11.4, Long 40.4
+Maziwi I	Lat -5.5, Long 39.1
+Mbudya I	Lat -6.7, Long 39.3
+Mchinga Bay	Lat -9.7, Long 39.8
+Mgau Mwania	Lat -10.1, Long 40.0
+Mikindani Bay	Lat -10.3, Long 40.2
+Mingoyo, Lindi River	Lat -10.1, Long 39.6
+Mkwaja	Lat -5.8, Long 38.9
+Msasani Bay	Lat -6.7, Long 39.3
+Mongo I	Lat -10.3, Long 40.3
+Moresby Point, Mafia I	Lat -7.6, Long 39.9
+Mungopani	Lat -6.0, Long 39.2
+Mwamba Shundo	Lat -4.9, Long 39.3
+Mwamba Wamba I	Lat -4.9, Long 39.3
+Mwana Mwana	Lat -5.8, Long 39.2
+Niororo I	Lat -7.7, Long 39.8
+North Fanjove Island	Lat -7.3, Long 39.5
+Nymphe shoal	Lat -10.1, Long 40.0
+Nyuni I	Lat -8.4, Long 39.6
+Okusa I (Okuza)	Lat -8.3, Long 39.6
+Pangani Bay	Lat -5.4, Long 39.0
+Port Mombasa	Lat -4.1, Long 39.6
+Port Said	Lat 31.3, Long 32.3
+Port Tewfik (Tafiq)	Lat 29.9, Long 32.6
+Pungume Island LH	Lat -6.4, Long 39.3
+Pungutiayu	Lat -4.7, Long 39.4
+Ras Banura	Lat -9.9, Long 39.8
+Ras Fungu	Lat -8.4, Long 39.3
+Ras Kanzi LH	Lat -7.0, Long 39.6
+Ras Kegomacha (Kigomasha), Pemba I	Lat -4.9, Long 39.7
+Ras Kipakoni	Lat -9.0, Long 39.6
+Ras Kisimani, Mafia I	Lat -8.0, Long 39.6
+Ras Makumbe (Mkumbi) LH, aka Moresby Point) 	Lat -7.6, Long 39.9
+Ras Matuso	Lat -8.9, Long 39.6
+Ras Miramba	Lat -8.8, Long 39.5
+Ras Sangamku	Lat -10.2, Long 40.2
+Ras Tikwiri	Lat -8.8, Long 39.5
+Rovuma Bay	Lat -10.4, Long 40.5
+Rukyira Bay	Lat -8.9, Long 39.6
+Saadani	Lat -2.0, Long 41.1
+Sadani (Saadani)	Lat -5.2, Long 39.1
+Salale, Rufiji river	Lat -7.8, Long 39.3
+Sange Island	Lat -5.7, Long 38.9
+Sefo Reef	Lat -7.8, Long 39.6
+Shangani Shoal	Lat -10.2, Long 40.2
+Shungumbili I	Lat -7.7, Long 39.3
+Sii Island	Lat -4.7, Long 39.3
+Simaya Island	Lat -8.3, Long 39.4
+Simba Uranga, Rufiji river	Lat -7.7, Long 39.3
+Simonstown	Lat -34.2, Long 18.4
+Songa Songa (Songo Songo)	Lat -8.5, Long 39.5
+Sudi Bay	Lat -10.1, Long 40.0
+Suez	Lat 30.0, Long 32.6
+Tambuzi Island	Lat -11.4, Long 40.6
+Tanga Bay	Lat -5.0, Long 39.1
+Tirene Bay, Mafia Island	Lat -7.9, Long 39.7
+Tunghi Bay (Baia de Tunge) 	Lat -10.8, Long 40.6
+Tutia reef	Lat -8.1, Long 39.7
+Ulenge LH, Kwale Bay	Lat -5.0, Long 39.3
+Wasin Island	Lat -4.7, Long 39.4
+Yambe Island	Lat -5.1, Long 39.2
+Zanzibar	Lat -6.2, Long 39.2

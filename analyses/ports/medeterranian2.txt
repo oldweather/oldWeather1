@@ -1,0 +1,52 @@
+Famagusta	Cyprus	Famagusta (pop pl)	35 07 30 N	33 57 00 E
+Gata, C	Cyprus	Cape Gata (cape)	34 34 00 N	33 02 15 E
+Paphos, C	Cyprus	Paphos Point (point)	34 45 15 N	32 24 10 E
+Alexandria	Egypt	Al Iskandar?yah (pop pl)
+Alexandria (conventional)
+Iskindiriya (var)	31 11 53 N	29 55 09 E
+Damietta Lt	Egypt	Dumy?? (pop pl)
+Damietta (conventional)	31 25 10 N	31 48 54 E
+Port Said	Egypt	B?r Sa?d (port)
+Port Said (conventional)	31 16 50 N	32 18 27 E
+Dedeagatch	Greece	Alexandroupolis (pop pl ? seat)
+Dedeagach (var) Bulgarian before being claimed by Greece	40 50 51 N	25 52 28 E
+Ithaca I	Greece	Nisos Ithaki (island)
+Ithaca (var)	38 24 00 N	20 40 00 E
+Milo	Greece	Nisos Milos (island)
+Milo, Milos, Melos (vars)	36 40 32 N	24 26 52 E
+Mitylene	Greece
+/ Turkey	Mitilini Strait (marine channel)	39 12 00 N	26 36 00 E
+Mudros Bay	Greece	Ormos Moudhrou
+Mudros Bay (var)
+	39 50 00 N	25 15 00 E
+Poros	Greece	Poros (pop pl)
+Nisos Poros (island)	37 29 58 N
+37 31 02 N	23 27 13 E
+23 28 38 E
+Port Mudros	Greece	Limin Moudhrou (harbor)
+Port Mudros (var)
+	39 53 00 N	25 15 00 E
+Port Pogon	Greece	"At the eastern extremity of Port Pogon, observe the town of Poros"
+Psara	Greece	Palaia Psara (pop pl)
+Psara (var)	38 32 00 N	25 34 00 E
+St Georgio I	Greece	(1) Agios Georgios (island)	37 28N	23 56E
+Vasiliko Bay	Greece	Ormos Vasilikis (bay)
+Vasiliki Bay (var)	38 37 00 N	20 36 00 E
+Vurko Bay	Greece	Ormos Vourkos (bay)
+Vurko Bay (var)	38 40 00 N	20 58 00 E
+Chanak	Turkey	Canakkale (pop pl - seat)
+Chanak (var)	40 08 44 N	26 24 23 E
+Marmarice	Turkey	Marmaris (pop pl)	36 51 18 N	28 16 27 E
+Mitylene	Turkey
+Greece /	Mitilini Strait (marine channel)	39 12 00 N	26 36 00 E
+Rabbit Is	Turkey	Karayer Adalar? (islands)
+Rabbit Islands (var)
+Nisides Mavreia (var)	39 55 46 N	26 04 13 E
+Tenedos	Turkey	Bozcaada (pop pl - seat)
+Tenedos (var)	39 50 06 N	26 04 11 E
+Tenedos I	Turkey	Bozcaada (island)
+Bokcha Adasi (var)
+Tenedos Island (var)
+Nisos Tenedos (var)	39 49 19 N	26 01 59 E
+Turon(?)	Turkey	Turan (pop pl)	38 27 00 N	27 09 00 E
+				

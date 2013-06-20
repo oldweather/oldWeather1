@@ -1,0 +1,260 @@
+Ostrov Erdmana	64.56/-173.30		
+Ostrov Geral'd	71.39/-175.65		
+Ostrov Geralda			See Ostrov Geral'd
+Ostrov Idlidlya	67.05/-172.75		
+Ostrov Itygran	64.62/-172.57		
+			
+Ostrov Karaginskiy	58.94/164.18		
+Ostrov Kolyuchin	67.47/-174.62	Chukotskiy Avtonomnyy Okrug	?????? ????????
+Ostrov Kosa Meechkyn	65.43/-178.00		
+Ostrov Litke	65.62/-170.90		
+Ostrov Mednyy	54.71/167.72		
+			
+Ostrov Ratmanova			See Big Diomede Island
+Ostrov Vrangelya			See Wrangel Island
+Ostrova Aynovskiye	69.83/31.61	Murmanskaya Oblast'	Ostrov Bolshoy Aynov Lighthouse
+Ostrovnoy	68.05/39.51	Murmanskaya Oblast'	?????????
+Pechenga Fiord	69.63/31.37	Murmanskaya Oblast'	???? ???????
+			
+Petropauloski			See Petropavlovsk Kamchatski
+Petropavlovsk Kamchatski	53.02/158.65	Kamchatskaya Oblast'	?????????????-??????????
+Plover Bay			See Reyd Plover
+Plover Land			See Wrangel Island
+Plubber Bay			See Reyd Plover
+			
+Port Providence			See Reyd Plover
+Port Rescue			See Bukhta Ruddera
+Proliv Longa			See De Long Strait
+Proliv Senyavina	64.75/-172.67		
+Providence Bay			See Bukhta Provideniya
+			
+Puoten Bluff			See Bukhta Puoten
+Ratmanof			See Big Diomede Island
+Ratmanoff Island			See Big Diomede Island
+Reka Anadyr			See Anadyr
+Reyd Plover	64.37/-173.35	Chukotskiy Avtonomnyy Okrug	???? ??????
+			
+Rocky Gulf			See Bukhta Ugol'naya
+Rodgers Harbor			See Bukhta Rodzhers
+Rudder Bay			See Bukhta Ruddera
+Saint Lawrence Bay			See Zaliv Lavrentiya
+Sand Point of the Holy Cross			See Ostrov Kosa Meechkyn
+			
+Small Island			See Ostrov Itygran
+Snug Harbor	64.58/-173.34		
+South Head			See Mys Kriguygun
+Sunday Island			See Ostrov Litke
+Three Brothers			See Kamni Tri Brata
+			
+Transfiguration Bay			See Bukhta Preobrazheniya
+Uelen	66.17/-169.80		
+Ugdnaya Bay			See Bukhta Ugol'naya
+Vankarem	67.84/-175.83		
+Vankarem River			See Laguna Vankarem
+			
+Wellen			See Uelen
+Whale Island			See Ostrov Erdmana
+Whalen			See Uelen
+Whalers Bay			See Bukhta Kitolovnaya
+Whalers Harbor			See Bukhta Kitolovnaya
+			
+Whaling			See Uelen
+Wrangel Island	71.23/-179.42		
+Yukanskie			See Ostrovnoy
+Zaliv Kiguan	64.27/-172.93		
+Zaliv Kresta			See Kresta Bay
+			
+Zaliv Lavrentiya	65.67/-171.08		
+Zaliv Tkachen			See Bukhta Tkachen
+Ainovskie Ostrovo			See Ostrova Aynovskiye
+Anadair Sea			See Gulf of Anadyr
+Anadir			See Anadyr
+Anadir Bay			See Gulf of Anadyr
+Anadir River			See Anadyr River
+			
+Anadir Sea			See Gulf of Anadyr
+Anadyr	64.73/177.50		
+Anadyr Bay			See Gulf of Anadyr
+Anadyr River	64.74/177.55		
+Anadyr Sea			See Gulf of Anadyr
+			
+Anadyrsky Liman			See Gulf of Anadyr
+Arakam Id			See Ostrov Arakamchechen
+Archangel Bay			See Bukhta Gavriila
+Archangel Gabriel Bay			See Bukhta Gavriila
+Avacha Bay			See Avachinskaya Guba
+			
+Avachinskaya Guba	52.93/158.6	Kamchatskaya Oblast'	?????????? ????
+Avatcha Bay			See Avachinskaya Guba
+Aynovskiye Ostrova			See Ostrova Aynovskiye
+Bald Head			See Mys Lysaya Golova
+Ball's Head			See Mys Lysaya Golova
+			
+Banka Geral'd	70.47/-171.25		
+Bay of Gabriel			See Bukhta Gavriila
+Bay of Holy Cross			See Kresta Bay
+Behring			See Ostrov Beringa
+Behring Island			See Ostrov Beringa
+			
+Bering Island			See Ostrov Beringa
+Big Diomede Island	65.77/-169.10	Chukotskiy Avtonomnyy Okrug	?????? ?????????
+Big Island			See Ostrov Arakamchechen
+Brothers			See Kamni Tri Brata
+Burney Island			See Ostrov Kolyuchin
+			
+Bukhta Emma			See Bukhta Komsomol'skaya
+Bukhta Gavriila	62.44/179.20		
+Bukhta Kitolovnaya	65.07/-175.92		
+Bukhta Komsomol'skaya	64.42/-173.21	Chukotskiy Avtonomnyy Okrug	????? ?????????????
+Bukhta Preobrazheniya	64.83/-175.40		
+			
+Bukhta Providence			See Bukhta Provideniya
+Bukhta Provideniya	64.40/-173.31	Chukotskiy Avtonomnyy Okrug	????? ??????????
+Bukhta Puoten	65.86/-170.53		
+Bukhta Ridder			See Bukhta Ruddera
+Bukhta Rodzhers	70.98/-178.42		
+			
+Bukhta Rodzhersa			See Bukhta Rodzhers
+Bukhta Rogers			See Bukhta Rodzhers
+Bukhta Rudder			See Bukhta Ruddera
+Bukhta Ruddera	65.40/-176.00		
+Bukhta Rudera			See Bukhta Ruddera
+			
+Bukhta Tkachen	64.47/-172.82		
+Bukhta Ugol'naya	63.00/179.36		
+Cape Aggen			See Mys Achchen
+Cape Apoupinskoi			See Mys Opukinskiy
+Cape Chaplin			See Mys Chaplina
+			
+Cape East			See Mys Dezhneva
+Cape Hawaii			See Mys Gavai
+Cape Navarin			See Mys Navarin
+Cape Navarino			See Mys Navarin
+Cape Naveriene			See Mys Navarin
+			
+Cape North			See Mys Shmidta
+Cape Nos			See Mys Chukotskiy
+Cape Olyutorsk			See Mys Olyutorskiy
+Cape Otorsk			See Mys Olyutorskiy
+Cape Pounpinskoi			See Mys Opukinskiy
+			
+Cape Serdzekamen			See Mys Serdtse-Kamen'
+Cape Saint Thaddeus			See Mys Faddeya
+Cape Serge			See Mys Serdtse-Kamen'
+Cape Surds			See Mys Serdtse-Kamen'
+Cape Surge			See Mys Serdtse-Kamen'
+			
+Cape Thaddeus			See Mys Faddeya
+Cape Ulahapen			See Mys Ulyakhpen
+Cape Unicorn			See Mys Unikyn
+Cape Unikan			See Mys Unikyn
+Cape Vankarem			See Mys Vankarem
+			
+Cape Wankarem			See Mys Vankarem
+Chukotski Nose			See Mys Chukotskiy
+Commander Islands	55.00/167.00		
+Corwin Island			See Ostrov Idlidlya
+De Long Strait	69.82/176.17		
+			
+Dezhnevo	66.05/-169.93		
+East Cape			See Mys Dezhneva
+East Head			See Mys Lysaya Golova
+East River			See Laguna Vankarem
+Emma Harbor			See Bukhta Komsomol'skaya
+			
+Emmatown			See Dezhnevo
+Enmitahin			See Dezhnevo
+False Cape			See Mys Inchoun
+False East Cape			See Mys Inchoun
+Gavan' Emma			See Bukhta Komsomol'skaya
+			
+Guba Gabriila			See Bukhta Gavriila
+Guba Arkhangela Gavriila			See Bukhta Gavriila
+Guba Gavriila			See Bukhta Gavriila
+Gulf of Anadyr	64.00/-178.00		
+Gulf of Saint Croix			See Kresta Bay
+			
+Herald Island			See Ostrov Geral'd
+Herald Reef			See Banka Geral'd
+Herald Shoal			See Banka Geral'd
+Holy Cross Bay			See Kresta Bay
+Hooper's Island			See Ostrov Idlidlya
+			
+Immatown			See Dezhnevo
+India Point			See Mys Chaplina
+Indian Point			See Mys Chaplina
+Island of the Big River			See Ostrov Kolyuchin
+Isle of Carrolshotkey			See Ostrov Karaginskiy
+			
+John Howland Bay			See Zaliv Kiguan
+Kamni Tri Brata	52.88/158.68	Kamchatskaya Oblast'	????? ??? ?????
+Laguna Vankarem	67.80/-176.00		
+Little John Howland Village			See Kivak
+Long Strait			See De Long Strait
+			
+Kaiaghinsky Island			See Ostrov Karaginskiy
+Kamchatka Sea	60.00/-175.00		
+Kamcatska Sea			See Kamchatka Sea
+Kanag-Kinsky Island			See Ostrov Karaginskiy
+Karagin Island			See Ostrov Karaginskiy
+			
+Kayne Id			See Ostrov Arakamchechen
+Kivak	64.27/-172.94		
+Kivik			See Kivak
+Kola Inlet	69.14/33.4	Murmanskaya Oblast'	???????? ?????
+Kolintchin Island			See Ostrov Kolyuchin
+			
+Koliuchin Bay			See Kolyuchinskaya Guba
+Kolyuchin Bay			See Kolyuchinskaya Guba
+Kolyuchinskaya Guba	66.82/-174.38		
+Komandorski Islands			See Commander Islands
+Komandorskiye Ostrova			See Commander Islands
+			
+Kresta Bay	66.00/-179.25		
+Kresta Gulf			See Kresta Bay
+Little Island			See Ostrov Itygran
+Marcus Bay			See Bukhta Tkachen
+Martin's Bay			See Bukhta Tkachen
+			
+Masinka Bay			See Proliv Senyavina
+Maska Island			See Ostrov Kosa Meechkyn
+Masken Island			See Ostrov Kosa Meechkyn
+Medny Island			See Ostrov Mednyy
+Mercury Harbor			See Bukhta Ruddera
+			
+Mys Achchen	64.78/-175.43		
+Mys Barykova	63.06/179.45		
+Mys Chaplina	64.41/-172.24		
+Mys Chukotskiy	64.24/-173.11		
+Mys Dezhneva	66.08/-169.65		
+			
+Mys Faddeya	62.66/179.62		
+Mys Fomy	70.97/178.67		
+Mys Gavai	71.03/-177.90		
+Mys Gil'der	70.98/178.63		
+Mys Inchoun	66.28/-170.21		
+			
+Mys Inchovyn			See Mys Inchoun
+Mys Intsova			See Mys Inchoun
+Mys Kriguygun	65.47/-171.05		
+Mys Lysaya Golova	64.30/-173.37		
+Mys Navarin	62.28/179.10		
+			
+Mys Nunyamo	65.61/-170.62		
+Mys Olyutorskiy	59.93/170.29		
+Mys Opukhinskiy			See Mys Opukinskiy
+Mys Opukinskiy	61.78/174.28		
+Mys Otto Shmidta			See Mys Shmidta
+			
+Mys Rubikon	61.86/174.72		
+Mys Serdiye Kamen'			See Mys Serdtse-Kamen'
+Mys Serdtse-Kamen'	66.91/-171.64		
+Mys Shmidta	68.93/-179.50		
+Mys Ulyakhpen	64.40/-173.90		
+			
+Mys Unikyn	66.36/-170.58		
+Mys Vankarem	67.85/-175.80	Chukotskiy Avtonomnyy Okrug	??? ????????
+North Head			See Mys Nunyamo
+Ostrov Beringa	55.00/166.27	Kamchatskaya Oblast'	?????? ???????
+Ostrov Arakamchechen	64.78/-172.37		
+
