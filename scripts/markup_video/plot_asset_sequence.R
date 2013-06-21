@@ -190,16 +190,30 @@ plot.CDate<-function(cD,base.x,base.y) {
 
 # Plot cannonical position
 plot.CPosition<-function(cD,base.x,base.y) {
-   for(v in c('raw_lat','raw_lng','port')) {
+   lat.source<-' '
+   if(is.null(cD[['data']][['raw_lat']]) && !is.null(cD[['data']][['lat']])) {
+        cD[['data']][['raw_lat']]<-cD[['data']][['lat']]
+        cD[['qc']][['raw_lat']]<-cD[['qc']][['lat']]
+   }
+   for(v in c('raw_lat','portlat','placelat')) {
+	if(!is.null(cD[['data']][[v]]) && nchar(cD[['data']][[v]])>1) {
+		lat.source<-v
+		break
+	}
+   }
+   lon.source<-' '
+   if(is.null(cD[['data']][['raw_lng']]) && !is.null(cD[['data']][['lng']])) {
+        cD[['data']][['raw_lng']]<-cD[['data']][['lng']]
+        cD[['qc']][['raw_lng']]<-cD[['qc']][['lng']]
+   }
+   for(v in c('raw_lng','portlon','placelon')) {
+	if(!is.null(cD[['data']][[v]]) && nchar(cD[['data']][[v]])>1) {
+		lon.source<-v
+		break
+	}
+   }
+   for(v in c(lat.source,lon.source,'port','place')) {
 	   value<-cD[['data']][[v]]
-	   if(is.null(value) && v=='raw_lat' && !is.null(cD[['data']][['lat']])) {
-		  v<-'lat'
-		  value<-cD[['data']][[v]]
-	   }
-	   if(is.null(value) && v=='raw_lng' && !is.null(cD[['data']][['lng']])) {
-		  v<-'lng'
-		  value<-cD[['data']][[v]]
-	   }
 	   qc<-cD[['qc']][[v]]
 	   if(!is.null(value) && nchar(value)>1) {
 	      if(qc=='U') {
