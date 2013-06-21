@@ -16,13 +16,13 @@ gp_event_link   <- gpar(col=rgb(0.80,0.19,0.14,0.75),fill=rgb(0.80,0.19,0.14,0.7
 gp_date         <- gpar(col=rgb(0.13,0.13,0.13,0.75),fill=rgb(0.13,0.13,0.13,0.75))
 gp_location     <- gpar(col=rgb(0.33,0.24,0.11,0.75),fill=rgb(0.33,0.24,0.11,0.75))
 gp_location_link<- gpar(col=rgb(0.33,0.24,0.11,0.75),fill=rgb(0.33,0.24,0.11,0.75))
-gp_cW           <- gpar(col=rgb(0,0,0,1),fill=rgb(0,0,0,1),fontfamily='courier',
+gp_cW           <- gpar(col=rgb(0,0,0,1),fill=rgb(0,0,0,1),fontfamily='mono',
                         fontsize=14)
-gp_cWb          <- gpar(col=rgb(0,0,0,1),fill=rgb(0,0,0,1),fontfamily='courier',
+gp_cWb          <- gpar(col=rgb(0,0,0,1),fill=rgb(0,0,0,1),fontfamily='mono',
                         fontsize=14,fontface='bold')
-gp_cWx          <- gpar(col=rgb(1,0,0,1),fill=rgb(1,0,0,1),fontfamily='courier',
+gp_cWx          <- gpar(col=rgb(1,0,0,1),fill=rgb(1,0,0,1),fontfamily='mono',
                         fontsize=14,fontface='bold')
-gp_cW1          <- gpar(col=rgb(0,0,0,1),fill=rgb(0,0,0,1),fontfamily='courier',
+gp_cW1          <- gpar(col=rgb(0,0,0,1),fill=rgb(0,0,0,1),fontfamily='mono',
                         fontsize=14,fontface='italic')
 
 # Get the height on the page for the various
@@ -49,6 +49,8 @@ get.event.height<-function(n.weather,n.event,Events) {
 # Draw a line linking the annotation box with its cannonical text.
 #   Call this (and all the other drawing functions) from the full page viewport.
 draw.link<-function(annotation,text.y=0) {
+   if(is.null(annotation[['page_info']][['top']]) ||
+      is.null(annotation[['page_info']][['left']])) return()
    y.left<-page.boundaries[4]+page.boundaries[2]*(1-as.numeric(annotation[['page_info']][['top']])/925-.05)
    x.left<-page.boundaries[3]+page.boundaries[1]*(as.numeric(annotation[['page_info']][['left']])/600)
    x.right<-0
@@ -86,6 +88,8 @@ draw.link<-function(annotation,text.y=0) {
 
 # Overlay the box associated with an annotation on the page image
 plot.box<-function(annotation,gp) {
+   if(is.null(annotation[['page_info']][['top']]) ||
+      is.null(annotation[['page_info']][['left']])) return()
    pushViewport(viewport(width=page.boundaries[1],height=page.boundaries[2],
                         x=page.boundaries[3],y=page.boundaries[4],
                          just=c("left","bottom"),name="vp_page"))
@@ -291,7 +295,9 @@ gather.events<-function(asset,max.lines=30,max.characters=75) {
 			   annotation[['data']][['event']],
 			   annotation[['data']][['category_final']])
 		 }
-         if(!is.null(annotation[['data']][['event']])) {
+         if(!is.null(annotation[['data']][['event']]) &&
+	        !is.null(annotation[['page_info']][['top']]) &&
+	        !is.null(annotation[['page_info']][['left']])) {
 		     count<-count+1
 		     events[[count]]<-annotation
 		     s[count]<-as.numeric(annotation[['page_info']][['top']])/925

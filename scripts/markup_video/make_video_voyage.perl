@@ -9,7 +9,7 @@ use MongoDB::OID;
 use boolean;
 use FindBin;
 use File::Basename;
-use lib "$FindBin::Bin/../Modules";
+use lib "$FindBin::Bin/../../Modules";
 use Asset;
 use Getopt::Long;
 use Data::Dumper;
@@ -23,7 +23,7 @@ unless ( defined($Ship_name) ) { die "Usage: --ship=<ship.name>"; }
 # Make the output directories
 my $Ship_dir = $Ship_name;
 $Ship_dir =~ s/\s+/_/g;
-my $Dir = sprintf( "%s/../asset_files/%s",
+my $Dir = sprintf( "%s/../../asset_files/%s",
     $FindBin::Bin, $Ship_dir);
 unless ( -d $Dir ) {
     system("mkdir -p $Dir");
@@ -76,7 +76,7 @@ foreach my $AssetId ( @AssetIds ) {
     # Make appropriately sized background file
     system("convert -geometry x627 \"$Dir/$Fname\" tmp.jpg") == 0 or die;
     system(
-"composite -geometry +46+46 tmp.jpg ../static_data/background.png tmp.png"
+"composite -geometry +46+46 tmp.jpg ../../static_data/background.png tmp.png"
       ) == 0
       or die;
 
