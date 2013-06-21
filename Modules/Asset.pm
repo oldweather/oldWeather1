@@ -11,6 +11,7 @@ use JSON -convert_blessed_universally;
 use Places qw(EstimateLLfromName);
 use String::Approx 'amatch';
 use Exporter;
+use Data::Dumper;
 @Asset::ISA    = qw(Exporter);
 @Asset::EXPORT = qw(asset_read);
 
@@ -140,6 +141,12 @@ sub read_transcriptions {
 
     while ( my $Transcription = $transcriptionI->next ) {
 
+        # Some have missing page data
+        foreach my $a ( @{ $Transcription->{annotations} } ) {
+            unless ( defined( $a->{page_info}->{top} ) ) $a->{page_info}->{top}
+              = $a->{page_info}->{abs_top};
+        }
+
         # Sort annotations by position on the page (top to bottom)
         @{ $Transcription->{annotations} } =
           sort { $a->{page_info}->{top} <=> $b->{page_info}->{top} }
@@ -153,6 +160,15 @@ sub read_transcriptions {
             $i++
           )
         {
+            if (
+                !defined(
+                    $Transcription->{annotations}[$i]->{page_info}->{top}
+                )
+              )
+            {
+                print Dumper $Transcription;
+                die;
+            }
             if ( defined( $Transcription->{annotations}[$i]->{data}->{air} ) ) {
                 $NWeather++;
             }
@@ -314,7 +330,7 @@ sub Make_cannonical_hour {
 sub Merge_annotations {
     my @Raw;
     foreach (@_) {
-	    unless(defined($_)) { next; }
+        unless ( defined($_) ) { next; }
         if ( $_ =~ /\S/ ) { push @Raw, $_; }
     }
     if ( scalar(@Raw) == 0 ) { return ( "",    "0" ); }
