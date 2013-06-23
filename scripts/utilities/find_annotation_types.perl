@@ -9,7 +9,7 @@ use MongoDB::OID;
 use boolean;
 use FindBin;
 use File::Basename;
-use lib "$FindBin::Bin/../Modules";
+use lib "$FindBin::Bin/../../Modules";
 use Asset;
 use Getopt::Long;
 use Data::Dumper;

@@ -15,23 +15,19 @@ use Getopt::Long;
 use Data::Dumper;
 
 my $Ship_name  = undef;
+my $Id         = undef; # If selected, only do this page
+my $Only       = undef; # If selected, only show this transcription
 my $ImageCount = 0;
 my $LastFile;
-GetOptions( "ship=s" => \$Ship_name );
-unless ( defined($Ship_name) ) { die "Usage: --ship=<ship.name>"; }
+GetOptions(
+    "ship=s" => \$Ship_name,
+    "id=s"   => \$Id,
+    "only=i" => \$Only
+);
 
-# Make the output directories
-my $Ship_dir = $Ship_name;
-$Ship_dir =~ s/\s+/_/g;
-my $Dir = sprintf( "%s/../../asset_files/%s",
-    $FindBin::Bin, $Ship_dir);
-unless ( -d $Dir ) {
-    system("mkdir -p $Dir");
+unless ( defined($Ship_name) ) {
+    die "Usage: --ship=<ship.name>";
 }
-
-# Clean up previous attempts
-if ( -r "$Ship_name.mp4" ) { unlink("$Ship_name.mp4"); }
-system("find $Dir -type f -name '*.png' -exec /bin/rm {} \\;");
 
 # Open the database connection (default port, default server)
 my $conn = MongoDB::Connection->new( query_timeout => -1 )
@@ -41,28 +37,43 @@ my $conn = MongoDB::Connection->new( query_timeout => -1 )
 my $db = $conn->get_database('oldWeather-production')
   or die "OW1 database not found";
 
-# Get the ship record
-my $ships = $db->ships->find( { "name" => $Ship_name } )
-  or die "No such ship: $Ship_name";
-my $Ship = $ships->next;    # Assume there's only one
+my @AssetIds;    # Assets to process
 
-# Get all the pages (assets) for this voyage
-my $assetI = $db->assets->find( { "ship_id" => $Ship->{_id} } );
-
-my @AssetIds;               # Buffer to avoid mongodb timeout
-while ( my $Asset = $assetI->next ) {
-
-    #if($Asset->{done}) { push @AssetIds, $Asset->{_id}; }
-    if ( $Asset->{done} ) { push @AssetIds, $Asset->{_id}; }
-
-    #print "$Asset->{_id}\n";
+# Make the output directories
+my $Ship_dir = $Ship_name;
+$Ship_dir =~ s/\s+/_/g;
+my $Dir = sprintf( "%s/../../asset_files/%s", $FindBin::Bin, $Ship_dir );
+unless ( -d $Dir ) {
+    system("mkdir -p $Dir");
 }
 
-#die;
+if ( !defined($Id) ) {
 
-foreach my $AssetId ( @AssetIds ) {
+    # Clean up previous attempts
+    if ( -r "$Ship_name.mp4" ) { unlink("$Ship_name.mp4"); }
+    system("find $Dir -type f -name '*.png' -exec /bin/rm {} \\;");
 
-    my $Asset = asset_read( $AssetId, $db );
+    # Get the ship record
+    my $ships = $db->ships->find( { "name" => $Ship_name } )
+      or die "No such ship: $Ship_name";
+    my $Ship = $ships->next;    # Assume there's only one
+
+    # Get all the pages (assets) for this voyage
+    my $assetI = $db->assets->find( { "ship_id" => $Ship->{_id} } );
+
+    while ( my $Asset = $assetI->next ) {
+
+        if ( $Asset->{done} ) { push @AssetIds, $Asset->{_id}; }
+
+    }
+}
+else {                          # only one id - for debugging
+    push @AssetIds, MongoDB::OID->new( value => $Id );
+}
+
+foreach my $AssetId (@AssetIds) {
+
+    my $Asset = asset_read( $AssetId, $db, $Only );
 
     # Download the image
     my $Fname = basename( $Asset->{location} );
@@ -89,6 +100,10 @@ foreach my $AssetId ( @AssetIds ) {
     my @Files = glob("$FindBin::Bin/images/*.png");
     for ( my $i = 0 ; $i < scalar(@Files) ; $i++ ) {
         my $OFName = sprintf( "%s/%05d.png", $Dir, $ImageCount++ );
+        if ( defined($Id) ) {
+            $OFName =
+              sprintf( "%s/%05d.2.png", "$FindBin::Bin/images", $ImageCount );
+        }
         system("composite $Files[$i] tmp.png $OFName") == 0 or die;
         if ( defined($LastFile) && -s $LastFile == -s $OFName ) {
             unlink($OFName);    # Skip identical frames
@@ -97,6 +112,7 @@ foreach my $AssetId ( @AssetIds ) {
         else { $LastFile = $OFName; }
     }
     unless ( defined($LastFile) ) { next; }
+    if     ( defined($Id) )       { die; }
     for ( my $i = 0 ; $i < 10 ; $i++ )
     {                           # Duplicate end of page image for pause in video
         my $CFName = sprintf( "%s/%05d.png", $Dir, $ImageCount++ );

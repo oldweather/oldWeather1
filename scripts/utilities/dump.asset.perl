@@ -15,7 +15,8 @@ use Getopt::Long;
 use Data::Dumper;
 
 my $Id = undef;
-GetOptions( "id=s" => \$Id );
+my $Only = undef; # If set, use only this transcription
+GetOptions( "id=s" => \$Id, "only=i" => \$Only );
 unless ( defined($Id) ) { die "Usage: dump.asset.prl --id=<oid>"; }
 
 # Open the database connection (default port, default server)
@@ -26,7 +27,7 @@ my $conn = MongoDB::Connection->new( query_timeout => -1 )
 my $db = $conn->get_database('oldWeather-production')
   or die "OW1 database not found";
 
-my $Asset = asset_read( MongoDB::OID->new( value => $Id ), $db );
+my $Asset = asset_read( MongoDB::OID->new( value => $Id ), $db, $Only );
 print Dumper $Asset;
 open( DOUT, ">tst.js" ) or die "Can't open JS file";
 print DOUT $Asset->to_JSON();

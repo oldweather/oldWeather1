@@ -29,8 +29,9 @@ sub new {
 sub asset_read {
     my $id   = shift;
     my $db   = shift;
+    my $Only = shift; # If set, use only this transcription
     my $Self = new Asset( $id, $db );
-    $Self->read_transcriptions($db);
+    $Self->read_transcriptions($db,$Only);
 
     # Make a cannonical date
     my %Date;
@@ -135,16 +136,25 @@ sub asset_read {
 sub read_transcriptions {
     my $Asset = shift;
     my $db    = shift;
+    my $Only  = shift;
     $Asset->{transcriptions} = ();
     my $transcriptionI =
       $db->classifications->find( { "asset_ids" => $Asset->{_id} } );
 
+    my $Count=0;
     while ( my $Transcription = $transcriptionI->next ) {
+
+        $Count++;
+        if(defined($Only) && $Only != $Count) { next; }
 
         # Some have missing page data
         foreach my $a ( @{ $Transcription->{annotations} } ) {
-            unless ( defined( $a->{page_info}->{top} ) ) $a->{page_info}->{top}
-              = $a->{page_info}->{abs_top};
+            unless ( defined( $a->{page_info}->{top} ) ) {
+                $a->{page_info}->{top} = $a->{page_info}->{abs_top}+106;
+            }
+            unless ( defined( $a->{page_info}->{left} ) ) {
+                $a->{page_info}->{left} = $a->{page_info}->{abs_left}+212;
+            }
         }
 
         # Sort annotations by position on the page (top to bottom)
@@ -264,11 +274,11 @@ sub CS_weather {
         return $Var;
     }
     if ( $Which eq 'T_height' ) {
-        $Var =~ s/[^\-\d]//g;
+        $Var =~ s/[^\.\-\d]//g;
         return $Var;
     }
     if ( $Which eq 'sea' ) {
-        $Var =~ s/\.\D//g;
+        $Var =~ s/[^\.\-\d]//g;
         return $Var;
     }
     if ( $Which eq 'B_code' ) {
