@@ -29,9 +29,9 @@ sub new {
 sub asset_read {
     my $id   = shift;
     my $db   = shift;
-    my $Only = shift; # If set, use only this transcription
+    my $Only = shift;                   # If set, use only this transcription
     my $Self = new Asset( $id, $db );
-    $Self->read_transcriptions($db,$Only);
+    $Self->read_transcriptions( $db, $Only );
 
     # Make a cannonical date
     my %Date;
@@ -141,19 +141,19 @@ sub read_transcriptions {
     my $transcriptionI =
       $db->classifications->find( { "asset_ids" => $Asset->{_id} } );
 
-    my $Count=0;
+    my $Count = 0;
     while ( my $Transcription = $transcriptionI->next ) {
 
         $Count++;
-        if(defined($Only) && $Only != $Count) { next; }
+        if ( defined($Only) && $Only != $Count ) { next; }
 
         # Some have missing page data
         foreach my $a ( @{ $Transcription->{annotations} } ) {
             unless ( defined( $a->{page_info}->{top} ) ) {
-                $a->{page_info}->{top} = $a->{page_info}->{abs_top}+106;
+                $a->{page_info}->{top} = $a->{page_info}->{abs_top} + 106;
             }
             unless ( defined( $a->{page_info}->{left} ) ) {
-                $a->{page_info}->{left} = $a->{page_info}->{abs_left}+212;
+                $a->{page_info}->{left} = $a->{page_info}->{abs_left} + 212;
             }
         }
 
@@ -164,21 +164,13 @@ sub read_transcriptions {
 
         # Count the weather observations (needed to get their times)
         my $NWeather = 0;
+        my $MaxHour;
         for (
             my $i = 0 ;
             $i < scalar( @{ $Transcription->{annotations} } ) ;
             $i++
           )
         {
-            if (
-                !defined(
-                    $Transcription->{annotations}[$i]->{page_info}->{top}
-                )
-              )
-            {
-                print Dumper $Transcription;
-                die;
-            }
             if ( defined( $Transcription->{annotations}[$i]->{data}->{air} ) ) {
                 $NWeather++;
             }
@@ -215,8 +207,9 @@ sub read_transcriptions {
                 # Add a cannonical hour
                 my $Chour = Make_cannonical_hour(
                     $Transcription->{annotations}[$i]->{page_info}->{top},
-                    $Nw, $NWeather );
+                    $Nw, $NWeather, $MaxHour );
                 $Transcription->{annotations}[$i]->{data}->{Chour} = $Chour;
+                $MaxHour = $Chour;
 
 #warn("$Chour $Transcription->{annotations}[$i]->{page_info}->{top} $Nw $NWeather");
                 $Nw++;
@@ -303,6 +296,7 @@ sub Make_cannonical_hour {
     my $ypx      = shift;
     my $Count    = shift;
     my $NWeather = shift;
+    my $Pmax     = shift;
     my $Chour;
     if ( $NWeather == 24 ) {    # Hourly obs
         $Chour = (
@@ -317,21 +311,27 @@ sub Make_cannonical_hour {
         $Chour = ( 4, 8, 12, 16, 18, 20, 24 )[$Count];
     }
     else {                        # Irregular. Guess from ypx based on watches
-        if ( $ypx > 800 ) { $Chour = 24; }
-        elsif ( $ypx > 700 ) {
-            $Chour = 20;
-        }
-        elsif ( $ypx > 500 ) {
-            $Chour = 16;
-        }
-        elsif ( $ypx > 400 ) {
-            $Chour = 12;
-        }
-        elsif ( $ypx > 300 ) {
-            $Chour = 8;
+        if ( $NWeather <= 10 ) {
+            if ( $ypx > 800 ) { $Chour = 24; }
+            elsif ( $ypx > 650 ) {
+                $Chour = 20;
+            }
+            elsif ( $ypx > 500 ) {
+                $Chour = 16;
+            }
+            elsif ( $ypx > 350 ) {
+                $Chour = 12;
+            }
+            elsif ( $ypx > 250 ) {
+                $Chour = 8;
+            }
+            else {
+                $Chour = 4;
+            }
+            if ( defined($Pmax) && $Chour <= $Pmax ) { $Chour = $Pmax + 2; }
         }
         else {
-            $Chour = 4;
+            $Chour = int( 25 * $ypx / 1000 );
         }
     }
     return $Chour;
