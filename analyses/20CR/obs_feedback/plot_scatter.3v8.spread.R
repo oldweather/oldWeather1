@@ -1,4 +1,5 @@
 # Make scatter plots from the 20CR obs feedback files
+# Compare analyses in 3.3.3 with those in 3.3.8
 
 library(TWCR)
 library(grid)
@@ -7,8 +8,6 @@ Year<-1918
 Month<-8
 Day<-12
 Hour<-6
-
-Version<-'3.3.8'
 
 # Get obs used in single assimilation run
 local.TWCR.get.obs<-function(year,month,day,hour,version=2) {
@@ -49,10 +48,11 @@ local.TWCR.get.obs<-function(year,month,day,hour,version=2) {
     return(o)
 }
 
-obs<-local.TWCR.get.obs(Year,Month,Day,Hour,version=Version)
+obs.3<-local.TWCR.get.obs(Year,Month,Day,Hour,version='3.3.3')
+obs.8<-local.TWCR.get.obs(Year,Month,Day,Hour,version='3.3.8')
 
-png('tst.png',width=1000,height=1000)
-range<-c(980,1040)
+png('tst.png',width=800,height=800)
+range<-c(0,2)
 
 pushViewport(viewport(width=1,height=1,x=0,y=0,
                           just=c("left","bottom"),name="vp_main"))
@@ -61,9 +61,9 @@ pushViewport(dataViewport(range,range))
 
 #tics<-pretty(range,n=5)
 grid.xaxis(main=T)
-grid.text('Observed Pressure',y=unit(-3,"lines"))
+grid.text('Analysis spread at ob (3.3.3)',y=unit(-3,"lines"))
 grid.yaxis(,main=T)
-grid.text('Analysis Pressure',x=unit(-3.5,"lines"), rot=90)
+grid.text('Analysis spread at ob (3.3.8)',x=unit(-3.5,"lines"), rot=90)
 
 gp_blue  = gpar(col=rgb(0,0,1,1),fill=rgb(0,0,1,1),lwd=2)
 gp_red  = gpar(col=rgb(1,0,0,1),fill=rgb(1,0,0,1),lwd=2)
@@ -72,21 +72,25 @@ grid.lines(x=unit(range,'native'),
             y=unit(range,'native'),
             gp=gp_grey)
 
-grid.polyline(x=unit(as.vector(rbind(obs$modified.obs,obs$modified.obs)),"native"),
-              y=unit(as.vector(rbind(obs$mean.analysis-obs$spread.analysis*2,
-                                     obs$mean.analysis+obs$spread.analysis*2)),'native'),
-               id.lengths=rep(2,length(obs$modified.obs)),
-               gp=gp_blue)
+grid.points(x=unit(obs.3$spread.analysis[-which(obs.3$oW.obs)],"native"),
+            y=unit(obs.8$spread.analysis[-which(obs.8$oW.obs)],"native"),
+            size=unit('0.02','npc'),
+            pch=20,
+            gp=gp_blue)
+l<-lm(obs.8$spread.analysis[-which(obs.8$oW.obs)]~obs.3$spread.analysis[-which(obs.3$oW.obs)])
+grid.lines(x=unit(range,'native'),
+           y=unit(range*l$coefficients[2]+l$coefficients[1],'native'),
+           gp=gp_blue)
 
-grid.polyline(x=unit(as.vector(rbind(obs$modified.obs[which(obs$oW.obs)],
-                                     obs$modified.obs[which(obs$oW.obs)])),"native"),
-              y=unit(as.vector(rbind(obs$mean.analysis[which(obs$oW.obs)]-
-                                       obs$spread.analysis[which(obs$oW.obs)]*2,
-                                     obs$mean.analysis[which(obs$oW.obs)]+
-                                       obs$spread.analysis[which(obs$oW.obs)]*2)),
-                               'native'),
-               id.lengths=rep(2,length(obs$modified.obs[which(obs$oW.obs)])),
-               gp=gp_red)
+grid.points(x=unit(obs.3$spread.analysis[which(obs.3$oW.obs)],"native"),
+            y=unit(obs.8$spread.analysis[which(obs.8$oW.obs)],"native"),
+            size=unit('0.02','npc'),
+            pch=20,
+            gp=gp_red)
+l<-lm(obs.8$spread.analysis[which(obs.8$oW.obs)]~obs.3$spread.analysis[which(obs.3$oW.obs)])
+grid.lines(x=unit(range,'native'),
+           y=unit(range*l$coefficients[2]+l$coefficients[1],'native'),
+           gp=gp_red)
 
 popViewport()
 popViewport()
