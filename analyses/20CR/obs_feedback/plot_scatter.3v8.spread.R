@@ -9,47 +9,10 @@ Month<-8
 Day<-12
 Hour<-6
 
-# Get obs used in single assimilation run
-local.TWCR.get.obs<-function(year,month,day,hour,version=2) {
-    base.dir<-TWCR:::TWCR.get.data.dir(version)
-    of.name<-sprintf(
-                "%s/observations/%04d/prepbufrobs_assim_%04d%02d%02d%02d.txt",base.dir,
-                year,year,month,day,hour)
-    if(!file.exists(of.name)) stop("No obs file fior given date")
-            o<-read.table(pipe(sprintf("cut -c1-160 %s",of.name)),
-                      header=F,stringsAsFactors=F,
-                      colClasses=c('character','integer','character',
-                                   rep('numeric',20)))
-        o$odates<-chron(dates=sprintf("%04d/%02d/%02d",as.integer(substr(o$V1,1,4)),
-                                                     as.integer(substr(o$V1,5,6)),
-                                                     as.integer(substr(o$V1,7,8))),
-          times=sprintf("%02d:00:00",as.integer(substr(o$V1,9,10))),
-          format=c(dates='y/m/d',times='h:m:s'))
-        o<-o[,seq(1,23)] # Truncate to regular section
-        o$V4<-as.numeric(o$V4)
-        o$V5<-as.numeric(o$V5)
-        o<-o[(o$V4<=360 & o$V5<=90),] # Throw away obs outside possible range
-    # Process the obs to set missing correctly and flag oW obs
-        o$height<-o$V7
-        is.na(o$height[o$height==9999])<-T
-        o$observed.pressure<-o$V11
-        is.na(o$observed.pressure[o$observed.pressure==10000])<-T 
-        o$modified.obs<-o$V10
-        is.na(o$modified.obs[o$modified.obs>9000])<-T
-    # Adjust to sea-level with a linear model
-        l<-lm(o$modified.obs~o$height+1)
-        o$modified.obs<-l$residuals+l$coefficients[1]
-        o$mean.analysis<-o$V22
-        is.na(o$mean.analysis[o$mean.analysis>1000])<-T
-        o$mean.analysis<-o$mean.analysis+o$modified.obs
-        o$spread.analysis<-o$V23
-        is.na(o$spread.analysis[o$spread.analysis>1000])<-T
-        o$oW.obs<-grepl('9931',o$V1) # Find the oW obs
-    return(o)
-}
-
-obs.3<-local.TWCR.get.obs(Year,Month,Day,Hour,version='3.3.3')
-obs.8<-local.TWCR.get.obs(Year,Month,Day,Hour,version='3.3.8')
+obs.3<-TWCR.get.obs.1file(Year,Month,Day,Hour,version='3.3.3')
+obs.3$oW.obs<-grepl('9931',obs.3$UID) # Find the oW obs
+obs.8<-TWCR.get.obs.1file(Year,Month,Day,Hour,version='3.3.8')
+obs.8$oW.obs<-grepl('9931',obs.8$UID) # Find the oW obs
 
 png('tst.png',width=800,height=800)
 range<-c(0,2)
@@ -72,22 +35,22 @@ grid.lines(x=unit(range,'native'),
             y=unit(range,'native'),
             gp=gp_grey)
 
-grid.points(x=unit(obs.3$spread.analysis[-which(obs.3$oW.obs)],"native"),
-            y=unit(obs.8$spread.analysis[-which(obs.8$oW.obs)],"native"),
+grid.points(x=unit(obs.3$Analysis.pressure.spread[-which(obs.3$oW.obs)],"native"),
+            y=unit(obs.8$Analysis.pressure.spread[-which(obs.8$oW.obs)],"native"),
             size=unit('0.02','npc'),
             pch=20,
             gp=gp_blue)
-l<-lm(obs.8$spread.analysis[-which(obs.8$oW.obs)]~obs.3$spread.analysis[-which(obs.3$oW.obs)])
+l<-lm(obs.8$Analysis.pressure.spread[-which(obs.8$oW.obs)]~obs.3$Analysis.pressure.spread[-which(obs.3$oW.obs)])
 grid.lines(x=unit(range,'native'),
            y=unit(range*l$coefficients[2]+l$coefficients[1],'native'),
            gp=gp_blue)
 
-grid.points(x=unit(obs.3$spread.analysis[which(obs.3$oW.obs)],"native"),
-            y=unit(obs.8$spread.analysis[which(obs.8$oW.obs)],"native"),
+grid.points(x=unit(obs.3$Analysis.pressure.spread[which(obs.3$oW.obs)],"native"),
+            y=unit(obs.8$Analysis.pressure.spread[which(obs.8$oW.obs)],"native"),
             size=unit('0.02','npc'),
             pch=20,
             gp=gp_red)
-l<-lm(obs.8$spread.analysis[which(obs.8$oW.obs)]~obs.3$spread.analysis[which(obs.3$oW.obs)])
+l<-lm(obs.8$Analysis.pressure.spread[which(obs.8$oW.obs)]~obs.3$Analysis.pressure.spread[which(obs.3$oW.obs)])
 grid.lines(x=unit(range,'native'),
            y=unit(range*l$coefficients[2]+l$coefficients[1],'native'),
            gp=gp_red)
