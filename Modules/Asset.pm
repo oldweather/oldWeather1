@@ -130,7 +130,7 @@ sub asset_read {
             ) = Merge_annotations( @{ $Hourly{$Variable} } );
         }
     }
-
+    
     return ($Self);
 }
 
@@ -290,7 +290,7 @@ sub CS_weather {
         $Var =~ s/[^\.\-\d]//g;
         return $Var;
     }
-    die "Unknown weather variable $Which";
+    warn "Unknown weather variable $Which";
 }
 
 sub Make_cannonical_hour {

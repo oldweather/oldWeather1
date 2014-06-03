@@ -79,12 +79,25 @@ foreach my $AssetId (@AssetIds) {
     print "\n$Asset->{_id}: ";
     print "($Asset->{location})\n";
 
-    if ( defined( $Asset->{CDate}->{data}->{date} ) ) {
-        printf "\nDate: %s\n", $Asset->{CDate}->{data}->{date};
-    }
+    if ( defined( $Asset->{CDate} ) ) {
+        print "\nDate: ";
+       if ( defined( $Asset->{CDate}->{data}->{year} ) &&
+            looks_like_number($Asset->{CDate}->{data}->{year})) {
+           printf "%04d/", $Asset->{CDate}->{data}->{year};
+       } else { print "    /"; }
+       if ( defined( $Asset->{CDate}->{data}->{month} )  &&
+            looks_like_number($Asset->{CDate}->{data}->{month})) {
+           printf "%02d/", $Asset->{CDate}->{data}->{month};
+       } else { print "  /"; }
+       if ( defined( $Asset->{CDate}->{data}->{day} )  &&
+            looks_like_number($Asset->{CDate}->{data}->{day})) {
+           printf "%02d", $Asset->{CDate}->{data}->{day};
+       } else { print "  "; }
+       print "\n";
+   }
 
 
-    if ( defined( $Asset->{CPosition} ) ) {
+  if ( defined( $Asset->{CPosition} ) ) {
         print "Position: ";
         my $LonSource = "";
         foreach my $v ( 'lng', 'raw_lng', 'portlon' ) {
@@ -172,7 +185,11 @@ foreach my $AssetId (@AssetIds) {
             if ( defined( $Asset->{CPosition}->{data}->{$v} )
                 && length( $Asset->{CPosition}->{data}->{$v} ) > 2 )
             {
+              if(looks_like_number($Asset->{CPosition}->{data}->{$v})) {
+                printf "%7.2f ", $Asset->{CPosition}->{data}->{$v};
+              } else {
                 printf "%s ", $Asset->{CPosition}->{data}->{$v};
+              }
             }
         }
         print "\n";
@@ -187,13 +204,14 @@ foreach my $AssetId (@AssetIds) {
                 printf "%s - ", $Annotation->{data}->{sub_category};
             }
             if ( defined( $Annotation->{data}->{category_value} ) ) {
-                printf "%s\n",
+                printf "%s",
                   $Annotation->{data}->{category_value};
             }
             if ( defined( $Annotation->{data}->{category_final} ) ) {
-                printf "%s\n",
+                printf " %s",
                   $Annotation->{data}->{category_final};
             }
+            print "\n";
 	}    
     }
 }
