@@ -3,10 +3,10 @@
 
 library(GSDF.TWCR)
 library(chron)
-library(multicore)
+library(parallel)
 
-base.dir<-'/data/cr2/hadpb/20CR/version_3.2.1/hourly/standard.deviations'
-variable<-'prmsl'
+base.dir<-'/Volumes/DataDir/20CR/version_3.2.1/hourly/standard.deviations'
+variable<-'air.2m'
 base.dir<-sprintf("%s/%s",base.dir,variable)
 dir.create(base.dir)
 
@@ -14,6 +14,8 @@ c.date<-chron(dates="1981/01/01",
           times="00:00:00",
           format=c(dates='y/m/d',times='h:m:s'))
 
+t<-TWCR.get.slice.at.hour(variable,1969,3,12,6)
+data.length<-length(as.vector(t$data))
 n.count<-seq(1,365*24)
 
 make.sd<-function(n.count) {
@@ -28,7 +30,7 @@ make.sd<-function(n.count) {
                     base.dir,Month,Day,Hour)
      if(file.exists(f.name)) return()
      
-     Accumulator<-array(dim=c(30,16380))
+     Accumulator<-array(dim=c(30,data.length))
 
       for(Year in seq(1981,2010)) {
 
@@ -37,7 +39,7 @@ make.sd<-function(n.count) {
 
       }
 
-      s<-sd(Accumulator)
+      s<-apply(Accumulator,2,sd)
 
       twcr.sd<-TWCR.get.slice.at.hour(variable,1981,Month,Day,Hour)
       twcr.sd$data[]<-s
@@ -48,4 +50,4 @@ make.sd<-function(n.count) {
     gc(verbose=F)
  }
      
-mclapply(n.count,make.sd,mc.cores=3,mc.preschedule=FALSE)
+f<-mclapply(n.count,make.sd,mc.cores=2,mc.preschedule=FALSE)

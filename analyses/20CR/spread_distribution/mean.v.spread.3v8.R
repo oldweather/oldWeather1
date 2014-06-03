@@ -6,7 +6,7 @@ library(grid)
 library(lattice)
 library(chron)
 
-variable<-'prmsl'
+variable<-'air.2m'
 
 Year<-1918
 Month<-3
@@ -16,7 +16,7 @@ Hour<-0
 c.date<-chron(dates=sprintf("%04d/%02d/%02d",Year,Month,Day),
           times=sprintf("%02d:00:00",Hour),
           format=c(dates='y/m/d',times='h:m:s'))
-n.count<-seq(0,100)
+n.count<-seq(0,10)
 
 read.obs.file<-function(n.count) {
    n.date<-c.date+n.count
@@ -38,9 +38,9 @@ read.obs.file<-function(n.count) {
      sd<-TWCR.get.slice.at.hour(variable,Year,Month,Day,Hour,
                                 version=2,type='standard.deviation')
      s2<-sqrt(v3.spread$data**2+v8.spread$data**2)
-     s.frac<-(sd$data*sqrt(2)/s2)
-     #w<-which(s2/sd$data<1) 
-     result<-c(result,((v3$data-v8$data)/s2)/s.frac)
+     #s.frac<-(sd$data*sqrt(2)/s2)
+     w<-which(s2/sd$data<0.05) 
+     result<-c(result,((v3$data-v8$data)/s2)[w])
 
     }
     return(result)
@@ -50,6 +50,7 @@ f<-lapply(n.count,read.obs.file)
 scaled.differences<-do.call('c',f)
 #w<-which(abs(scaled.differences)<1) 
 sd.sd<-sd(scaled.differences)
+sd.mean<-mean(scaled.differences)
 
 range<-c(-5,5)
 f.x<-seq(range[1],range[2],(range[2]-range[1])/100)
@@ -73,13 +74,14 @@ print(histogram(scaled.differences[w],breaks=100,
            panel = function(...) {
              panel.histogram(...)
              grid.lines(x=unit(f.x,'native'),
-                        y=unit(dnorm(f.x,sd=1),'native'),
+                        y=unit(dnorm(f.x,mean=0,sd=1),'native'),
                         gp=gp_red)
              grid.lines(x=unit(f.x,'native'),
-                        y=unit(dnorm(f.x,sd=sd.sd),'native'),
+                        y=unit(dnorm(f.x,mean=sd.mean,sd=sd.sd),'native'),
                         gp=gp_blue)
              }),newpage=F)
 
 upViewport(0)
 
 dev.off()
+print(sprintf("Mean: %5.1f, sd: %5.1f",sd.mean,sd.sd))

@@ -61,6 +61,7 @@ sub asset_read {
         foreach my $Annotation ( @{ $Transcription->{annotations} } ) {
             unless (
                    defined( $Annotation->{data}->{lat} )
+                || defined( $Annotation->{data}->{raw_lat} )
                 || defined( $Annotation->{data}->{port} )
                 || ( defined( $Annotation->{data}->{category} )
                     && $Annotation->{data}->{category} eq 'Place' )
