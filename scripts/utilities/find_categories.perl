@@ -19,7 +19,7 @@ my $db = $conn->get_database('oldWeather-production')
 
 my %Categories;
 my %SubCategories;
-my $transcriptionsI = $db->classifications->find();
+my $transcriptionsI = $db->get_collection('classifications')->find();
 
 while ( my $Transcription = $transcriptionsI->next ) {
     foreach my $Annotation ( @{ $Transcription->{annotations} } ) {

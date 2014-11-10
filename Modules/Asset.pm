@@ -20,7 +20,7 @@ sub new {
     my $class  = ref($that) || $that;
     my $id     = shift;
     my $db     = shift;
-    my $assetI = $db->assets->find( { "_id" => $id } );
+    my $assetI = $db->get_collection('assets')->find( { "_id" => $id } );
     my $self   = $assetI->next;                        # Assume there's only one
     bless $self, $class;
     return $self;
@@ -140,7 +140,7 @@ sub read_transcriptions {
     my $Only  = shift;
     $Asset->{transcriptions} = ();
     my $transcriptionI =
-      $db->classifications->find( { "asset_ids" => $Asset->{_id} } );
+      $db->get_collection('classifications')->find( { "asset_ids" => $Asset->{_id} } );
 
     my $Count = 0;
     while ( my $Transcription = $transcriptionI->next ) {

@@ -54,12 +54,12 @@ if ( !defined($Id) ) {
     system("find $Dir -type f -name '*.png' -exec /bin/rm {} \\;");
 
     # Get the ship record
-    my $ships = $db->ships->find( { "name" => $Ship_name } )
+    my $ships = $db->get_collection('ships')->find( { "name" => $Ship_name } )
       or die "No such ship: $Ship_name";
     my $Ship = $ships->next;    # Assume there's only one
 
     # Get all the pages (assets) for this voyage
-    my $assetI = $db->assets->find( { "ship_id" => $Ship->{_id} } );
+    my $assetI = $db->get_collection('assets')->find( { "ship_id" => $Ship->{_id} } );
 
     while ( my $Asset = $assetI->next ) {
 
@@ -121,6 +121,6 @@ foreach my $AssetId (@AssetIds) {
 }
 
 system(
-"ffmpeg -r 10 -i $Dir/%05d.png -c:v libx264  -preset fast -pix_fmt yuv420p -crf 22 -c:a copy $Ship_dir.mp4"
+"ffmpeg -r 10 -i $Dir/%05d.png -c:v libx264  -tune animation -preset fast -pix_fmt yuv420p -crf 22 -c:a copy $Ship_dir.mp4"
   ) == 0
   or die "Can't make movie";
