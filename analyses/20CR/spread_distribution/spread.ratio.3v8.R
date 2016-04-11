@@ -16,7 +16,7 @@ Hour<-0
 c.date<-chron(dates=sprintf("%04d/%02d/%02d",Year,Month,Day),
           times=sprintf("%02d:00:00",Hour),
           format=c(dates='y/m/d',times='h:m:s'))
-n.count<-seq(0,100)
+n.count<-seq(0,20)
 
 read.obs.file<-function(n.count) {
    n.date<-c.date+n.count
@@ -27,20 +27,16 @@ read.obs.file<-function(n.count) {
    result<-NULL
    for(Hour in c(0,6,12,18)) {
 
-     #v3<-TWCR.get.slice.at.hour(variable,Year,Month,Day,Hour,
-     #                           version='3.3.3',type='mean')
      v3.spread<-TWCR.get.slice.at.hour(variable,Year,Month,Day,Hour,
                                 version='3.3.3',type='spread')
-     v3.spread$data[]<-sqrt(v3.spread$data)
-     #v8<-TWCR.get.slice.at.hour(variable,Year,Month,Day,Hour,
-     #                           version='3.3.8',type='mean')
      v8.spread<-TWCR.get.slice.at.hour(variable,Year,Month,Day,Hour,
                                 version='3.3.8',type='spread')
-     v8.spread$data[]<-sqrt(v8.spread$data)
-     #sd<-TWCR.get.slice.at.hour(variable,Year,Month,Day,Hour,
-     #                           version=2,type='standard.deviation')
-     #w<-which(v8.spread$data/sd$data< 1.0 & v3.spread$data/sd$data < 1.0)
-     result<-c(result,(v3.spread$data/v8.spread$data))
+     sd<-TWCR.get.slice.at.hour(variable,Year,Month,Day,Hour,
+                                version=2,type='standard.deviation')
+     r<-v3.spread$data**2/v8.spread$data**2
+     s2<-sqrt((v3.spread$data**2+v8.spread$data**2)/2)
+     w<-which(s2<sd$data*0.05 & s2>sd$data*0.0)
+     result<-c(result,r[w])
 
     }
     return(result)
@@ -65,16 +61,16 @@ pushViewport(viewport(width=1.0,height=1.0,x=0.0,y=0.0,
 
 #           ylim=c(0,0.005),
 print(histogram(scaled.differences,breaks=200,
-           main='Ratio of spread (3.3.8/3.3.8)',
+           main='Ratio of spread**2 (3.3.3/3.3.8)',
            xlim=range,
            type='density',
            panel = function(...) {
              panel.histogram(...)
+             #grid.lines(x=unit(f.x,'native'),
+             #           y=unit(df(f.x,df1=55,df2=55),'native'),
+             #           gp=gp_red)
              grid.lines(x=unit(f.x,'native'),
-                        y=unit(df(f.x,df1=55,df2=55),'native'),
-                        gp=gp_red)
-             grid.lines(x=unit(f.x,'native'),
-                        y=unit(df(f.x,df1=200,df2=200),'native'),
+                        y=unit(df(f.x,df1=75,df2=75),'native'),
                         gp=gp_blue)
              }),newpage=F)
 upViewport(0)
