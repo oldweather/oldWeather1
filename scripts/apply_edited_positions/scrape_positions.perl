@@ -11,16 +11,22 @@ use Date::Calc qw(check_date check_time Delta_DHMS);
 
 my $Imma_file;
 my $Url;
-my $Last=0;
-my $Next=0;
+my $Last=0;   # If==1 - use positions from the last page as well
+my $Next=0;   # If==1 - use positions from the next page as well
+my $Infill=0; # If==1 - edited history incomplete - infill missing positions from original records 
 GetOptions(
     "imma=s"         => \$Imma_file,
     "url=s"          => \$Url,
     "lastpage=i"     => \$Last,
-    "nextpage=i"     => \$Next
+    "nextpage=i"     => \$Next,
+    "infill=i"       => \$Infill
 );
 unless ( defined($Imma_file) &&
          defined($Url) ) { die "Usage: --imma=<imma_file> --url=<edited_history_url>"; }
+
+# Set an output file name
+my $OPFile = $Imma_file;
+$OPFile =~ s/\.\.\/\.\.\/imma/imma_new/;
 
 my $nhn=`curl $Url`;
 $nhn =~ s/[\r\n]/ /gm; # strip newlines
@@ -104,10 +110,24 @@ foreach my $Record (@Old) {
 fill_gaps('LAT');
 fill_gaps('LON');
 
-# Done - output the new obs
-for(my $i=0;$i<scalar(@Imma);$i++) {
-    $Imma[$i]->write(\*STDOUT);
+# If infill needed - fill in missing positions from the old data
+if($Infill) {
+    for(my $i=0;$i<scalar(@Imma);$i++) {
+	if(!defined($Imma[$i]->{LAT}) && defined($Old[$i]->{LAT})) {
+	    $Imma[$i]->{LAT}=$Old[$i]->{LAT};
+	}
+	if(!defined($Imma[$i]->{LON}) && defined($Old[$i]->{LON})) {
+	    $Imma[$i]->{LON}=$Old[$i]->{LON};
+	}
+    }
 }
+
+# Done - output the new obs
+open(DOUT,">$OPFile") or die "Can't write to $OPFile";
+for(my $i=0;$i<scalar(@Imma);$i++) {
+    $Imma[$i]->write(\*DOUT);
+}
+close(DOUT);
 
 sub interpolate {
     my $Var      = shift;
