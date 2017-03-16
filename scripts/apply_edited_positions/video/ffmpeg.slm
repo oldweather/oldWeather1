@@ -1,0 +1,15 @@
+#!/bin/ksh -l
+#SBATCH --qos=normal
+#SBATCH --mem=200000
+#SBATCH --ntasks=16
+#SBATCH --ntasks-per-core=1
+#SBATCH --time=65
+
+cd $SCRATCH/images
+
+rm oW1.update.hourly.mp4
+# Get rid of empty images - they make ffmpeg stop processing
+#  These usually come from disc problems in the creation step.
+find oW1.update.hourly./*.png -type f -empty -delete
+
+ffmpeg -r 24 -pattern_type glob -i oW1.update.hourly/\*.png -c:v libx264 -threads 16 -preset slow -tune animation -profile:v high -level 4.2 -pix_fmt yuv420p -crf 28 -c:a copy oW1.update.hourly.mp4

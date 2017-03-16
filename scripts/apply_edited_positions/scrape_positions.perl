@@ -7,6 +7,9 @@ use warnings;
 use Data::Dumper;
 use Getopt::Long;
 use MarineOb::IMMA;
+use MarineOb::lmrlib
+  qw(rxltut ixdtnd rxnddt fxeimb fxmmmb fwbpgv fxtftc ix32dd ixdcdd fxbfms
+     fwbptf fwbptc);
 use Date::Calc qw(check_date check_time Delta_DHMS);
 
 my $Imma_file;
@@ -29,7 +32,7 @@ my $OPFile = $Imma_file;
 $OPFile =~ s/\.\.\/\.\.\/imma/imma_new/;
 
 my $nhn=`curl $Url`;
-$nhn =~ s/[\r\n]/ /gm; # strip newlines
+$nhn =~ s/[\r\n]/ /g; # strip newlines
 my @nhn = split /\<\/p\>/,$nhn; # split on paragraphs
 
 #print Dumper @nhn;
@@ -46,7 +49,7 @@ my %NextP;
 
 for(my $i=0;$i<scalar(@nhn);$i++) {
 
-    if($nhn[$i] =~ /(........................):\s+\(\<a href=\"http:/) {
+    if($nhn[$i] =~ /([0-9a-f]{24}):/) {
       	$PageID = $1;
         $PageIDx[$PageCount]=$PageID;
         if($PageCount>0) { 
@@ -57,10 +60,10 @@ for(my $i=0;$i<scalar(@nhn);$i++) {
     #    print "$PageID\n";
     }
     $nhn[$i] = lc($nhn[$i]);
-    if($nhn[$i] =~ /lat\s+(\-*\d+\.*\d*)/) {
+    if($nhn[$i] =~ /lat\s+(\-*\d+\.*\d*)/ && !defined($Lat{$PageID})) {
         $Lat{$PageID} = $1;
     }
-    if($nhn[$i] =~ /long\s+(\-*\d+\.*\d*)/) {
+    if($nhn[$i] =~ /long\s+(\-*\d+\.*\d*)/ && !defined($Lon{$PageID})) {
         $Lon{$PageID} = $1;
         unless(defined($Lat{$PageID})) { 
            $Lat{$PageID} = undef;
@@ -72,11 +75,22 @@ for(my $i=0;$i<scalar(@nhn);$i++) {
 #    unless(defined($Lon{$PageID})) { $Lon{$PageID}='NA'; }
 #    printf "%s,%s,%s\n",$PageID,$Lat{$PageID},$Lon{$PageID};
 #}
+#die;
 
 # Get the old IMMA data
 my @Old;
 open(DIN,$Imma_file) or die "Can't open $Imma_file";
-while ( my $Record = imma_read( \*DIN ) ) { push @Old,$Record; }
+while ( my $Record = imma_read( \*DIN ) ) { 
+   # Extract the ship date and time
+    if($Record->{SUPD} =~ /(\d\d\d\d)\/(\d\d)\/(\d\d):(\d\d)/) {
+       $Record->{YR2} = $1;
+       $Record->{MO2} = $2;
+       $Record->{DY2} = $3;
+       $Record->{HR2} = $4;
+       if($Record->{HR2}==24) { $Record->{HR2}=23.99; }
+    }
+   push @Old,$Record;
+}
 close(DIN);
 
 # Delete the positions and replace them with edited ones
@@ -84,8 +98,8 @@ my @Imma;
 foreach my $Record (@Old) {
     $Record->{LAT}=undef;
     $Record->{LON}=undef;
-    if($Record->{SUPD} =~ /\d\d\d\d\D\d\d\D\d\d\D12/ &&   # Noon ob
-       $Record->{SUPD} =~ /(4caf\S\S\S\S\S\S\S\S\S\S\S\S\S\S\S\S\S\S\S\S)/ ) {
+    if($Record->{HR2}==12 &&   # Noon ob
+       $Record->{SUPD} =~ /([0-9a-f]{24})/ ) {
 	if(defined($Lat{$1})) { 
            $Record->{LAT}=$Lat{$1};
         } else {
@@ -106,18 +120,80 @@ foreach my $Record (@Old) {
     push @Imma,$Record      
 }
 
+# QC check - filter out 1-off hemisphere errors
+if(0) { # Don't
+my @Threepoint;
+for(my $i=0;$i<scalar(@Imma);$i++) {
+    if(defined($Imma[$i]->{LAT})) {
+	if(defined($Threepoint[1])) { $Threepoint[0]=$Threepoint[1]; }
+	if(defined($Threepoint[2])) { $Threepoint[1]=$Threepoint[2]; }
+	$Threepoint[2]=$i;
+        if(defined($Threepoint[0])) {
+	    if($Imma[$Threepoint[0]]->{LAT}*$Imma[$Threepoint[2]]->{LAT}>0) {
+		if($Imma[$Threepoint[1]]->{LAT}*$Imma[$Threepoint[2]]->{LAT}<0) {
+		    $Imma[$Threepoint[1]]->{LAT} *= -1;
+		}
+	    }
+	}
+    }
+}
+@Threepoint=undef;
+for(my $i=0;$i<scalar(@Imma);$i++) {
+    if(defined($Imma[$i]->{LON})) {
+	if(defined($Threepoint[1])) { $Threepoint[0]=$Threepoint[1]; }
+	if(defined($Threepoint[2])) { $Threepoint[1]=$Threepoint[2]; }
+	$Threepoint[2]=$i;
+        if(defined($Threepoint[0])) {
+	    if($Imma[$Threepoint[0]]->{LON}*$Imma[$Threepoint[2]]->{LON}>0) {
+		if($Imma[$Threepoint[1]]->{LON}*$Imma[$Threepoint[2]]->{LON}<0) {
+		    $Imma[$Threepoint[1]]->{LON} *= -1;
+		}
+	    }
+	}
+    }
+}
+}		   
+
 # Fill in the position gaps by interpolation
 fill_gaps('LAT');
 fill_gaps('LON');
 
+# Update UTC dates given new position
+foreach my $Record (@Imma) {
+   if(defined($Record->{LAT}) && defined($Record->{LON}) &&
+      defined($Record->{YR2}) && defined($Record->{MO2}) &&
+      defined($Record->{DY2}) && defined($Record->{HR2}) &&
+      IMMA_check_date($Record)) {
+	my $elon=$Record->{LON};
+	if ( $elon < 0 ) { $elon += 360; }
+        if( $elon<0.1 ) { $elon=0.1; } # Buggy around 0/360
+        if( $elon>359.9 ) { $elon=359.9; } 
+	my ( $uhr, $udy ) = rxltut(
+	    $Record->{HR2} * 100,
+	    ixdtnd( $Record->{DY2}, $Record->{MO2}, $Record->{YR2} ),
+	    $elon * 100
+	);
+	$Record->{HR} = $uhr / 100;
+	( $Record->{DY}, $Record->{MO}, $Record->{YR} ) = rxnddt($udy);
+   }
+}
+
 # If infill needed - fill in missing positions from the old data
 if($Infill) {
+    
+    my @Inf;
+    open(DIN,$Imma_file) or die "Can't open $Imma_file";
+    while ( my $Record = imma_read( \*DIN ) ) { 
+       push @Inf,$Record;
+    }
+    close(DIN);
+    
     for(my $i=0;$i<scalar(@Imma);$i++) {
-	if(!defined($Imma[$i]->{LAT}) && defined($Old[$i]->{LAT})) {
-	    $Imma[$i]->{LAT}=$Old[$i]->{LAT};
+	if(!defined($Imma[$i]->{LAT}) && defined($Inf[$i]->{LAT})) {
+	    $Imma[$i]->{LAT}=$Inf[$i]->{LAT};
 	}
-	if(!defined($Imma[$i]->{LON}) && defined($Old[$i]->{LON})) {
-	    $Imma[$i]->{LON}=$Old[$i]->{LON};
+	if(!defined($Imma[$i]->{LON}) && defined($Inf[$i]->{LON})) {
+	    $Imma[$i]->{LON}=$Inf[$i]->{LON};
 	}
     }
 }
@@ -137,6 +213,8 @@ sub interpolate {
     my $Max_days = shift;
     my $Max_var  = shift;
 
+    unless(defined($Previous) && defined($Next)) { return; }
+
     # Give up if the gap is too long
     if (
         IMMA_Delta_Seconds( $Previous, $Next ) > $Max_days*86400
@@ -147,7 +225,7 @@ sub interpolate {
         return;
     }
 
-    # Deal with any logitude wrap-arounds
+    # Deal with any lnogitude wrap-arounds
     my $Next_var = $Next->{$Var};
     if( $Var eq 'LON') {
        if ( $Next_var - $Previous->{LON} > 180 ) { $Next_var -= 360; }
@@ -215,12 +293,12 @@ sub fill_gaps {
 # Check that a record has a good date & time
 sub IMMA_check_date {
     my $Ob = shift;
-    if(defined( $Ob->{YR}) &&
-       defined( $Ob->{MO}) &&
-       defined( $Ob->{DY}) &&
-       defined( $Ob->{HR}) &&
-       check_date($Ob->{YR},$Ob->{MO},$Ob->{DY}) &&
-       check_time(int($Ob->{HR}/100),30,30)) { return(1); }
+    if(defined( $Ob->{YR2}) &&
+       defined( $Ob->{MO2}) &&
+       defined( $Ob->{DY2}) &&
+       defined( $Ob->{HR2}) &&
+       check_date($Ob->{YR2},$Ob->{MO2},$Ob->{DY2}) &&
+       check_time(int($Ob->{HR2}/100),30,30)) { return(1); }
     return;
 }
 # Difference between 2 records in seconds
@@ -228,18 +306,19 @@ sub IMMA_Delta_Seconds {
     my $First = shift;
     my $Last  = shift;
     my ( $Dd, $Dh, $Dm, $Ds ) = Delta_DHMS(
-        $First->{YR},
-        $First->{MO},
-        $First->{DY},
-        int( $First->{HR} ),
-        int( ( $First->{HR} - int( $First->{HR} ) ) * 60 ),
+        $First->{YR2},
+        $First->{MO2},
+        $First->{DY2},
+        int( $First->{HR2} ),
+        int( ( $First->{HR2} - int( $First->{HR2} ) ) * 60 ),
         0,
-        $Last->{YR},
-        $Last->{MO},
-        $Last->{DY},
-        int( $Last->{HR} ),
-        int( ( $Last->{HR} - int( $Last->{HR} ) ) * 60 ),
+        $Last->{YR2},
+        $Last->{MO2},
+        $Last->{DY2},
+        int( $Last->{HR2} ),
+        int( ( $Last->{HR2} - int( $Last->{HR2} ) ) * 60 ),
         0
     );
     return $Dd * 86400 + $Dh * 3600 + $Dm * 60 + $Ds;
 }
+

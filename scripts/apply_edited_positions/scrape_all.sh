@@ -17,7 +17,7 @@
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Antrim.htm"                    --imma=../../imma/Antrim.imma
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-11-HMS_Aphis.htm"                     --imma=../../imma/Aphis.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Argonaut.htm"                  --imma=../../imma/Argonaut.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-04-HMS_Ark_Royal.htm"                 --imma=../../imma/Ark_Royal.imma
+./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-04-HMS_Ark_Royal.htm"                 --imma=../../imma/Ark_Royal.imma # Second half done later - see base of file.
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Arlanza.htm"                   --imma=../../imma/Arlanza.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_ArmadaleCastle.htm"            --imma=../../imma/Armadale_Castle.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Artois.htm"                    --imma=../../imma/Artois.imma
@@ -32,7 +32,7 @@
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-01-HMS_Barham.htm"                    --imma=../../imma/Barham.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-09-HMS_Bayano.htm"                    --imma=../../imma/Bayano.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-11-HMS_Bee.htm"                       --imma=../../imma/Bee.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-04-HMS_Ben-my-Chree.htm"              --imma=../../imma/Ben-My-Chree.imma
+./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-04-HMS_Ben-my-Chree.htm"              --imma=../../imma/Ben-my-Chree.imma
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Berwick.htm"                   --imma=../../imma/<i>Berwick</i>.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-06-HMS_Birmingham.htm"                --imma=../../imma/Birmingham.imma
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Blenheim.htm"                  --imma=../../imma/<i>Blenheim</i>.imma
@@ -99,7 +99,7 @@
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-06-HMS_Despatch.htm"                  --imma=../../Despatch.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Devonshire.htm"                --imma=../../imma/Devonshire.imma
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Diana.htm"                     --imma=../../imma/<i>Diana</i>.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Digby.htm"                     --imma=../../imma/Digby.imma
+./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Digby.htm"                     --imma=../../imma/Digby.imma              --infill=1
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-06-HMS_Diomede.htm"                   --imma=../../Diomede.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Donegal.htm"                   --imma=../../imma/Donegal.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-06-HMS_Dragon.htm"                    --imma=../../imma/Dragon.imma
@@ -115,7 +115,7 @@
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Edinburgh_Castle.htm"          --imma=../../imma/<i>Edinburgh_Castle</i>.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-04-HMS_Empress.htm"                   --imma=../../imma/Empress.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_EmpressOfBritain.htm"          --imma=../../imma/Empress_of_Britain.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Empress_of_Japan.htm"          --imma=../../imma/Empress_of_Japan.imma
+##./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Empress_of_Japan.htm"          --imma=../../imma/Empress_of_Japan.imma  # No file - why?
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-18-HMS_Endeavour.htm"                 --imma=../../imma/Endeavour.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Endymion.htm"                  --imma=../../imma/Endymion.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-18-HMS_Enterprise.htm"                --imma=../../imma/Enterprise.imma
@@ -136,7 +136,7 @@
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-31-HMS_Foyle.htm"                     --imma=../../imma/Foyle.imma
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-06-HMS_Galatea.htm"                   --imma=../../imma/<i>Galatea</i>.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Gibraltar.htm"                 --imma=../../imma/Gibraltar.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-06-HMS_Glasgow.htm"                   --imma=../../imma/Glasgow.imma
+#./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-06-HMS_Glasgow.htm"                   --imma=../../imma/Glasgow.imma     # Missing?
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-01-HMS_Glory.htm"                     --imma=../../imma/Glory.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-06-HMS_Gloucester.htm"                --imma=../../imma/Gloucester.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Gloucestershire.htm"           --imma=../../imma/Gloucestershire.imma
@@ -147,10 +147,10 @@
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Hampshire.htm"                 --imma=../../imma/Hampshire.imma
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-01-HMS_Hannibal.htm"                  --imma=../../imma/<i>Hannibal</i>.imma
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-06-HMS_Hawkins.htm"                   --imma=../../imma/Hawkins.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Hermione.htm"                  --imma=../../imma/Hermione.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-01-HMS_Hibernia.htm"                  --imma=../../imma/Hibernia.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Highflyer.htm"                 --imma=../../imma/Highflyer.imma                  --infill
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Hilary.htm"                    --imma=../../imma/Hilary.imma
+#./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Hermione.htm"                  --imma=../../imma/Hermione.imma    # Missing
+# ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-01-HMS_Hibernia.htm"                  --imma=../../imma/Hibernia.imma   # Empty file?
+./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Highflyer.htm"                 --imma=../../imma/Highflyer.imma                  --infill=1
+#./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Hilary.htm"                    --imma=../../imma/Hilary.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Hildebrand.htm"                --imma=../../imma/Hildebrand.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Himalaya.htm"                  --imma=../../imma/Himalaya.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-18-HMS_Hollyhock.htm"                 --imma=../../imma/Hollyhock.imma
@@ -185,7 +185,7 @@
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-09-HMS_Lepanto.htm"                   --imma=../../imma/Lepanto.imma
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Leviathan.htm"                 --imma=../../imma/<i>Leviathan</i>.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-06-HMS_Liverpool.htm"                 --imma=../../imma/Liverpool.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-31-HMS_Lord_Minto.htm"                --imma=../../imma/Lord_Minto.imma
+#./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-31-HMS_Lord_Minto.htm"                --imma=../../imma/Lord_Minto.imma # Missing
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-06-HMS_Lowestoft.htm"                 --imma=../../imma/Lowestoft.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-09-HMS_Lunka.htm"                     --imma=../../imma/Lunka.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-03-HMS_M.23.htm"                      --imma=../../imma/M.23.imma
@@ -195,7 +195,7 @@
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-03-HMS_M.31.htm"                      --imma=../../imma/M.31.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-03-HMS_M.33.htm"                      --imma=../../imma/M.33.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Macedonia.htm"                 --imma=../../imma/Macedonia.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-18-HMS_Magnolia.htm"                  --imma=../../imma/Magnolia.imma
+./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-18-HMS_Magnolia.htm"                  --imma=../../imma/Magnolia.imma --infill=1
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-01-HMS_Malaya.htm"                    --imma=../../imma/Malaya.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-04-HMS_Manica.htm"                    --imma=../../imma/Manica.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-11-HMS_Mantis.htm"                    --imma=../../imma/Mantis.imma
@@ -233,7 +233,7 @@
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Patuca.htm"                    --imma=../../imma/Patuca.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-04-HMS_Pegasus.htm"                   --imma=../../imma/Pegasus.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Pelorus.htm"                   --imma=../../imma/Pelorus.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-31-HMS_Persian_Empire.htm"            --imma=../../imma/Persian_Empire.imma
+# ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-31-HMS_Persian_Empire.htm"            --imma=../../imma/Persian_Empire.imma # Missing
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-09-HMS_Perth.htm"                     --imma=../../imma/<i>Perth</i>.imma
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-22-HMS_Petersfield.htm"               --imma=../../imma/<i>Petersfield</i>.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-06-HMS_Phaeton.htm"                   --imma=../../imma/Phaeton.imma
@@ -270,11 +270,11 @@
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-01-HMS_Swiftsure.htm"                 --imma=../../imma/Swiftsure.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-06-HMAS_Sydney.htm"                   --imma=../../imma/Sydney.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-05-HMS_Talbot.htm"                    --imma=../../imma/Talbot.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-80-HMS_Tamar.htm"                     --imma=../../imma/Tamar.imma
+#./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-80-HMS_Tamar.htm"                     --imma=../../imma/Tamar.imma  # Missing
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-11-HMS_Tarantula.htm"                 --imma=../../imma/Tarantula.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-10-HM_TB_037.htm"                     --imma=../../imma/TB.037.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-10-HM_TB_35.htm"                      --imma=../../imma/TB.35.imma
-./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-10-HM_TB_36.htm"                      --imma=../../imma/TB.36.imma
+./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-10-HM_TB_037.htm"                     --imma=../../imma/TB_37.imma
+##./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-10-HM_TB_35.htm"                      --imma=../../imma/TB.35.imma  # No such file
+./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-10-HM_TB_36.htm"                      --imma=../../imma/TB_36.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-11-HMS_Teal.htm"                      --imma=../../imma/Teal.imma
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-01-HMS_Temeraire.htm"                 --imma=../../imma/Temeraire.imma
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-31-HMS_Tenby_Castle.htm"              --imma=../../imma/Tenby_Castle.imma
@@ -312,3 +312,7 @@
 ./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-11-HMS_Woodcock.htm"                  --imma=../../imma/Woodcock.imma
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-11-HMS_Woodlark.htm"                  --imma=../../imma/<i>Woodlark</i>.imma
 #./scrape_positions.perl    --url="http://www.naval-history.net/OWShips-WW1-06-HMS_Yarmouth.htm"                  --imma=../../imma/<i>Yarmouth</i>.imma
+# Must be run after the first phase completed - moved down here to allow parallel runs.
+./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-04-HMS_Ark_Royal2.htm"                --imma=imma_new/Ark_Royal.imma    --infill=1 # 2-stage file - do sequentially
+./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-01-HMS_Caesar2.htm"                   --imma=imma_new/Caesar.imma       --infill=1
+./scrape_positions.perl     --url="http://www.naval-history.net/OWShips-WW1-08-HMS_Otranto2.htm"                  --imma=imma_new/Otranto.imma      --infill=1
